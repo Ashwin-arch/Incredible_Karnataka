@@ -1,0 +1,533 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Narasimha Jharni Cave Temple",
+                "district": "Bidar",
+                "category": "Religious",
+                "description": "Cave Temple for sustainable tourism."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.5483,
+                    17.9008
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Basavakalyan Fort",
+                "district": "Bidar",
+                "category": "Heritage",
+                "description": "Historic Fort highlighting heritage sites."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.9490,
+                    17.8747
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Papnash Temple",
+                "district": "Bidar",
+                "category": "Religious",
+                "description": "Ancient Temple site."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.5145,
+                    17.8853
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Buddha Vihar",
+                "district": "Kalaburagi",
+                "category": "Heritage",
+                "description": "Monument set amid ecological landscapes."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.8343,
+                    17.3277
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Chandralamba Temple",
+                "district": "Kalaburagi",
+                "category": "Religious",
+                "description": "Historic Temple."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.7772,
+                    16.8755
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sharan Basaveshwara Temple",
+                "district": "Kalaburagi",
+                "category": "Religious",
+                "description": "Famous temple focal point."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.8346,
+                    17.3347
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jaladurga Fort",
+                "district": "Raichur",
+                "category": "Heritage",
+                "description": "Island fort for scenic exploration."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.3425,
+                    16.2070
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ek Minar Ki Masjid",
+                "district": "Raichur",
+                "category": "Heritage",
+                "description": "Heritage mosque."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.3560,
+                    16.2120
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Manvi Island",
+                "district": "Raichur",
+                "category": "Nature",
+                "description": "Natural island for scenic exploration."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.3358,
+                    16.1992
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Yana Rocks",
+                "district": "Uttara Kannada",
+                "category": "Nature",
+                "description": "Geological wonders and coastal forts."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.5740,
+                    14.5896
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Magod Falls",
+                "district": "Uttara Kannada",
+                "category": "Nature",
+                "description": "Beautiful Waterfall."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.4293,
+                    14.7457
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mirjan Fort",
+                "district": "Uttara Kannada",
+                "category": "Heritage",
+                "description": "Coastal fort with geological significance."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.4221,
+                    14.4870
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ottinene Beach",
+                "district": "Udupi",
+                "category": "Nature",
+                "description": "Pristine beach for coastal tourism."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.6457,
+                    13.9743
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kodi Bengre",
+                "district": "Udupi",
+                "category": "Nature",
+                "description": "Scenic beach stretch."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.7004,
+                    13.3702
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "St Mary's Island",
+                "district": "Udupi",
+                "category": "Nature",
+                "description": "Unique geological island formation."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.6790,
+                    13.3797
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Gudavi Bird Sanctuary",
+                "district": "Shivamogga",
+                "category": "Nature",
+                "description": "Wildlife sanctuary in the Ghats."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.0664,
+                    14.2065
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kunchikal Falls",
+                "district": "Shivamogga",
+                "category": "Nature",
+                "description": "High waterfall set in the Ghats."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.0774,
+                    13.4356
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Agumbe Sunset Point",
+                "district": "Shivamogga",
+                "category": "Nature",
+                "description": "Breathtaking viewpoint."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.0903,
+                    13.5077
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ballalarayana Durga",
+                "district": "Chikkamagaluru",
+                "category": "Adventure",
+                "description": "Trekking peak with historic fort ruins."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.7280,
+                    13.2671
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mullayanagiri Peak",
+                "district": "Chikkamagaluru",
+                "category": "Nature",
+                "description": "Highest peak in Karnataka."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.7219,
+                    13.3833
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jhari Falls",
+                "district": "Chikkamagaluru",
+                "category": "Nature",
+                "description": "Scenic waterfall in the hills."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.6935,
+                    13.3717
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sanapur Lake",
+                "district": "Koppal",
+                "category": "Nature",
+                "description": "Serene lake near Hampi."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.4643,
+                    15.3423
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Anegundi Heritage Village",
+                "district": "Koppal",
+                "category": "Heritage",
+                "description": "Heritage village near Hampi."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.4773,
+                    15.3494
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Anjanadri Hill",
+                "district": "Koppal",
+                "category": "Adventure",
+                "description": "Trekking hill, believed to be the birthplace of Hanuman."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.4809,
+                    15.3532
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Karighatta Hill",
+                "district": "Mandya",
+                "category": "Nature",
+                "description": "Hill with scenic views near Mysore."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.6803,
+                    12.4257
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Shimsha Falls",
+                "district": "Mandya",
+                "category": "Nature",
+                "description": "Waterfall in the Mysore region."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.0231,
+                    12.3384
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "KRS Dam",
+                "district": "Mandya",
+                "category": "Nature",
+                "description": "Major dam and garden near Mysore."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.5732,
+                    12.4218
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lakkundi Heritage Site",
+                "district": "Gadag",
+                "category": "Heritage",
+                "description": "Ancient temples and archaeological sites."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.7548,
+                    15.4571
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Trikuteshwara Temple",
+                "district": "Gadag",
+                "category": "Religious",
+                "description": "Historic temple complex."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.6301,
+                    15.4297
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Dambal Buddhist Site",
+                "district": "Gadag",
+                "category": "Heritage",
+                "description": "Archaeological Buddhist site."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.5732,
+                    15.3444
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jogimatti Hills",
+                "district": "Chitradurga",
+                "category": "Nature",
+                "description": "Hills for adventure and history."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.4051,
+                    14.2273
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Chandravalli Caves",
+                "district": "Chitradurga",
+                "category": "Heritage",
+                "description": "Archaeological cave site."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.3925,
+                    14.2056
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vani Vilasa Dam",
+                "district": "Chitradurga",
+                "category": "Nature",
+                "description": "Historic dam for adventure and history."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.3082,
+                    14.3197
+                ]
+            }
+        }
+    ]
+}
