@@ -1,18 +1,32 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Installation and Setup
 
-First, run the development server:
+Follow these steps to get the project running locally:
 
+### 1. Prerequisite
+Ensure you have [Node.js](https://nodejs.org/) (v18 or later) installed.
+
+### 2. Install Dependencies
+Run the following command in the project root:
+```bash
+npm install
+```
+
+### 3. Run Development Server
+Start the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### 4. Build and Start for Production
+To create an optimized production build:
+```bash
+npm run build
+npm start
+```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
