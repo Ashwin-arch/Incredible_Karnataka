@@ -1,0 +1,2903 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7471694,
+          13.3326012
+        ]
+      },
+      "properties": {
+        "name": "TMA Pai Hospital",
+        "category": "Hospital",
+        "osm_id": 672742480,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7893684,
+          13.3534806
+        ]
+      },
+      "properties": {
+        "name": "KMC Hospital",
+        "category": "Hospital",
+        "osm_id": 870908719,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7911689,
+          13.3448213
+        ]
+      },
+      "properties": {
+        "name": "Venugopal Temple",
+        "category": "Temple",
+        "osm_id": 1351122753,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.785311,
+          13.3399775
+        ]
+      },
+      "properties": {
+        "name": "Prasanna Ganapathy Temple",
+        "category": "Temple",
+        "osm_id": 1351122754,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7353449,
+          13.34711
+        ]
+      },
+      "properties": {
+        "name": "Hotel Karavali",
+        "category": "Restaurant",
+        "osm_id": 1463815771,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7355906,
+          13.347585
+        ]
+      },
+      "properties": {
+        "name": "Hotel Karavali",
+        "category": "Hotel",
+        "osm_id": 1463819193,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7520421,
+          13.341185
+        ]
+      },
+      "properties": {
+        "name": "Sri Krishna Temple Udupi",
+        "category": "Temple",
+        "osm_id": 1464247021,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7476617,
+          13.333019
+        ]
+      },
+      "properties": {
+        "name": "Krishna Bhavan",
+        "category": "Restaurant",
+        "osm_id": 1474295263,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7485039,
+          13.337771
+        ]
+      },
+      "properties": {
+        "name": "Unnamed",
+        "category": "Restaurant",
+        "osm_id": 1474305072,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.749151,
+          13.329745
+        ]
+      },
+      "properties": {
+        "name": "C.S.I. Lombard Memorial Hospital",
+        "category": "Hospital",
+        "osm_id": 1474358993,
+        "address": "Pb. No-5, Dr.Lombard Memorial Hospital Road,(Mission Hospital Road) Christian High School",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7382121,
+          13.3880794
+        ]
+      },
+      "properties": {
+        "name": "Veerabhadra Temple",
+        "category": "Temple",
+        "osm_id": 1530683062,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7373433,
+          13.3882934
+        ]
+      },
+      "properties": {
+        "name": "Goretti Hospital",
+        "category": "Hospital",
+        "osm_id": 1530684154,
+        "address": "Kalianpur, Santhekatte",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7423038,
+          13.3340175
+        ]
+      },
+      "properties": {
+        "name": "District Hospital",
+        "category": "Hospital",
+        "osm_id": 1603383345,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7511876,
+          13.3393811
+        ]
+      },
+      "properties": {
+        "name": "Woodlands Restaurent",
+        "category": "Restaurant",
+        "osm_id": 1603405876,
+        "address": "",
+        "phone": "0820 252 2807",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7818837,
+          13.337986
+        ]
+      },
+      "properties": {
+        "name": "Old Heritage Village",
+        "category": "Museum",
+        "osm_id": 1715754370,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7905163,
+          13.3542716
+        ]
+      },
+      "properties": {
+        "name": "Fortune Inn Valley View",
+        "category": "Hotel",
+        "osm_id": 1828385028,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7838781,
+          13.3484128
+        ]
+      },
+      "properties": {
+        "name": "Pizza Hut Delivery",
+        "category": "Restaurant",
+        "osm_id": 1828385077,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7498957,
+          13.3366579
+        ]
+      },
+      "properties": {
+        "name": "Tamboola",
+        "category": "Restaurant",
+        "osm_id": 1837719664,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7506948,
+          13.3370127
+        ]
+      },
+      "properties": {
+        "name": "Mitra Hospital",
+        "category": "Hospital",
+        "osm_id": 1839485349,
+        "address": "Mitra Priya Mitra Priya",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7524249,
+          13.3407518
+        ]
+      },
+      "properties": {
+        "name": "Mitra Samaj Hotel",
+        "category": "Restaurant",
+        "osm_id": 1839485356,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7484543,
+          13.341896
+        ]
+      },
+      "properties": {
+        "name": "Udupi Residency",
+        "category": "Restaurant",
+        "osm_id": 1843807925,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7523026,
+          13.337437
+        ]
+      },
+      "properties": {
+        "name": "Sri Venktaramana Temple, Udupi",
+        "category": "Temple",
+        "osm_id": 1896133264,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7465765,
+          13.343186
+        ]
+      },
+      "properties": {
+        "name": "Kediyoor",
+        "category": "Restaurant",
+        "osm_id": 1969650324,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7985189,
+          13.3462753
+        ]
+      },
+      "properties": {
+        "name": "Temple",
+        "category": "Temple",
+        "osm_id": 2444991521,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7921138,
+          13.3624788
+        ]
+      },
+      "properties": {
+        "name": "Unnamed",
+        "category": "Temple",
+        "osm_id": 2444991560,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7874661,
+          13.3517605
+        ]
+      },
+      "properties": {
+        "name": "Dollops",
+        "category": "Restaurant",
+        "osm_id": 2559569715,
+        "address": "Tiger Circle",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7429217,
+          13.3889567
+        ]
+      },
+      "properties": {
+        "name": "Hotel Sharadamba",
+        "category": "Restaurant",
+        "osm_id": 3257726921,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7854428,
+          13.3525202
+        ]
+      },
+      "properties": {
+        "name": "Manipal Museum of Anatomy & Pathology",
+        "category": "Museum",
+        "osm_id": 3304615440,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7634409,
+          13.3288307
+        ]
+      },
+      "properties": {
+        "name": "Narayana Guru Bhajana Mandira",
+        "category": "Temple",
+        "osm_id": 3718247169,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7552362,
+          13.3887569
+        ]
+      },
+      "properties": {
+        "name": "Sri Siddivinayaka Temple",
+        "category": "Temple",
+        "osm_id": 3721836584,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.743887,
+          13.329401
+        ]
+      },
+      "properties": {
+        "name": "MTR",
+        "category": "Restaurant",
+        "osm_id": 4017638989,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.743811,
+          13.329302
+        ]
+      },
+      "properties": {
+        "name": "Konark Veg",
+        "category": "Restaurant",
+        "osm_id": 4017640789,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7877291,
+          13.350283
+        ]
+      },
+      "properties": {
+        "name": "Hotel Madhuvan serai",
+        "category": "Hotel",
+        "osm_id": 4582562948,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7074473,
+          13.3396134
+        ]
+      },
+      "properties": {
+        "name": "Bridge",
+        "category": "Tourist Attraction",
+        "osm_id": 5532623821,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7061755,
+          13.3487708
+        ]
+      },
+      "properties": {
+        "name": "Hotel Kart",
+        "category": "Hotel",
+        "osm_id": 5532698821,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6955203,
+          13.3478931
+        ]
+      },
+      "properties": {
+        "name": "Malpe Seawalk",
+        "category": "Tourist Attraction",
+        "osm_id": 5885157538,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7397265,
+          13.3248376
+        ]
+      },
+      "properties": {
+        "name": "Udupi Entrance Arch",
+        "category": "Tourist Attraction",
+        "osm_id": 6003068816,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7830396,
+          13.3480285
+        ]
+      },
+      "properties": {
+        "name": "ZZA bar (pizza)",
+        "category": "Restaurant",
+        "osm_id": 6035939588,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7876944,
+          13.3512453
+        ]
+      },
+      "properties": {
+        "name": "Hadika",
+        "category": "Restaurant",
+        "osm_id": 6081395487,
+        "address": "Smrithi Bhavan",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7875808,
+          13.3515568
+        ]
+      },
+      "properties": {
+        "name": "Eye of the Tiger",
+        "category": "Restaurant",
+        "osm_id": 6081442986,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7529219,
+          13.3440211
+        ]
+      },
+      "properties": {
+        "name": "Hotel Srinivasa Residency",
+        "category": "Hotel",
+        "osm_id": 6198000785,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7931871,
+          13.3520381
+        ]
+      },
+      "properties": {
+        "name": "MIT Cafeteria",
+        "category": "Restaurant",
+        "osm_id": 6698939485,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7900929,
+          13.3538104
+        ]
+      },
+      "properties": {
+        "name": "Kasturba Hospital, Udupi",
+        "category": "Hospital",
+        "osm_id": 6938695150,
+        "address": "Madhava Nagar, Pumpwell, Manipal",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7356558,
+          13.3129462
+        ]
+      },
+      "properties": {
+        "name": "S. D. M. Ayurveda Hospital",
+        "category": "Hospital",
+        "osm_id": 6938996759,
+        "address": "Kuthpady",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7489327,
+          13.3373118
+        ]
+      },
+      "properties": {
+        "name": "J M J Diagnova Hospital",
+        "category": "Hospital",
+        "osm_id": 6939052533,
+        "address": "Church Road",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7624175,
+          13.3595038
+        ]
+      },
+      "properties": {
+        "name": "Dr.A.V.Baliga Memorial Hospital",
+        "category": "Hospital",
+        "osm_id": 6939067858,
+        "address": "6Th Main, V.M.Nagar,Doddanaguddue",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7474562,
+          13.3435049
+        ]
+      },
+      "properties": {
+        "name": "Manjunatha Eye Hospital",
+        "category": "Hospital",
+        "osm_id": 6944239594,
+        "address": "Vyavahar Plaza,Bannanje",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7964286,
+          13.345353
+        ]
+      },
+      "properties": {
+        "name": "MIT Food Court 2",
+        "category": "Restaurant",
+        "osm_id": 7218195085,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.747338,
+          13.3400479
+        ]
+      },
+      "properties": {
+        "name": "Adarsha Hospital",
+        "category": "Hospital",
+        "osm_id": 7562741442,
+        "address": "Brahmagiri, Udupi",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7648591,
+          13.3450736
+        ]
+      },
+      "properties": {
+        "name": "Sunag Ortho Care And Multi-Speciality Centre",
+        "category": "Hospital",
+        "osm_id": 7562741521,
+        "address": "Near MGM College, Kunjibettu, Udupi",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7495363,
+          13.3385134
+        ]
+      },
+      "properties": {
+        "name": "Koosamma Shambhu Shetty Memorial Haji Abdullah Mother & Child Hospital",
+        "category": "Hospital",
+        "osm_id": 7562741528,
+        "address": "Thenkpete, Maruthi Veethika, Udupi",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7571562,
+          13.360701
+        ]
+      },
+      "properties": {
+        "name": "Karamballi Sri Venkataramana Temple",
+        "category": "Temple",
+        "osm_id": 7826896146,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7525144,
+          13.3572259
+        ]
+      },
+      "properties": {
+        "name": "Sri Panchadhoomavathi Dhaivasthana",
+        "category": "Temple",
+        "osm_id": 7827475381,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.777684,
+          13.3935061
+        ]
+      },
+      "properties": {
+        "name": "Ashirwad Hotel",
+        "category": "Restaurant",
+        "osm_id": 8188056039,
+        "address": "Ashirwad complex near St Xavier primary school Kolalagiri, Uppur, Karnataka",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7439725,
+          13.3436306
+        ]
+      },
+      "properties": {
+        "name": "Hotel Krishna Comforts",
+        "category": "Hotel",
+        "osm_id": 8196826231,
+        "address": "Bannanje, Shiribeedu, Brahmagiri, Udupi, Karnataka",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7486779,
+          13.333688
+        ]
+      },
+      "properties": {
+        "name": "Hotel Usha",
+        "category": "Hotel",
+        "osm_id": 8196826262,
+        "address": "Kadekoppala, Chitpady, Udupi, Karnataka",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7369217,
+          13.3504956
+        ]
+      },
+      "properties": {
+        "name": "Hotel Manipal Inn, Udupi",
+        "category": "Hotel",
+        "osm_id": 10054349096,
+        "address": "NH 66",
+        "phone": "+918660567253",
+        "website": "https://manipalinn.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7512669,
+          13.3392076
+        ]
+      },
+      "properties": {
+        "name": "Dosa Hut",
+        "category": "Restaurant",
+        "osm_id": 10763368221,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7527877,
+          13.3416332
+        ]
+      },
+      "properties": {
+        "name": "New Yathri Nivas",
+        "category": "Hotel",
+        "osm_id": 10781949174,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7501315,
+          13.3433695
+        ]
+      },
+      "properties": {
+        "name": "New Shanthi Sagar",
+        "category": "Restaurant",
+        "osm_id": 10846614452,
+        "address": "Geethanjali Road",
+        "phone": "+919740970185",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7511834,
+          13.3428114
+        ]
+      },
+      "properties": {
+        "name": "Sri Krishna Paradise",
+        "category": "Hotel",
+        "osm_id": 10852998123,
+        "address": "",
+        "phone": "+9195918 11362",
+        "website": "https://www.hotelsrikrishnaresidency.com/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6982895,
+          13.3625195
+        ]
+      },
+      "properties": {
+        "name": "Fisherman's Bay Beach Cafe",
+        "category": "Restaurant",
+        "osm_id": 11201285512,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7449152,
+          13.2934744
+        ]
+      },
+      "properties": {
+        "name": "Kaustubha Residency",
+        "category": "Hotel",
+        "osm_id": 11201314023,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7449275,
+          13.2935341
+        ]
+      },
+      "properties": {
+        "name": "Dine n Divine",
+        "category": "Restaurant",
+        "osm_id": 11201314024,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7524582,
+          13.3460616
+        ]
+      },
+      "properties": {
+        "name": "Pizza Hut",
+        "category": "Restaurant",
+        "osm_id": 11201340839,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7477612,
+          13.3394186
+        ]
+      },
+      "properties": {
+        "name": "Fish Factory",
+        "category": "Restaurant",
+        "osm_id": 11201340843,
+        "address": "",
+        "phone": "+91 70907 93927",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7502906,
+          13.3427618
+        ]
+      },
+      "properties": {
+        "name": "Corporation Bank Heritage Museum",
+        "category": "Museum",
+        "osm_id": 11201340846,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7707794,
+          13.3359615
+        ]
+      },
+      "properties": {
+        "name": "Pooja Restaurant",
+        "category": "Restaurant",
+        "osm_id": 11201340849,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7497543,
+          13.339703
+        ]
+      },
+      "properties": {
+        "name": "Hotel Swadesh Hertitage",
+        "category": "Hotel",
+        "osm_id": 11201340852,
+        "address": "",
+        "phone": "+91 820 252 9605; +91 820 252 9705; +91 820 429 3605",
+        "website": "https://www.hotelswadesh.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.770916,
+          13.3352312
+        ]
+      },
+      "properties": {
+        "name": "New Pooja Veg Restaurant",
+        "category": "Restaurant",
+        "osm_id": 11260081538,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6990735,
+          13.3579352
+        ]
+      },
+      "properties": {
+        "name": "Aquateria Coastal Curries",
+        "category": "Restaurant",
+        "osm_id": 11407181046,
+        "address": "",
+        "phone": "+918105307700",
+        "website": "https://aquateria-coastal-curries.business.site/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6984984,
+          13.3589137
+        ]
+      },
+      "properties": {
+        "name": "Golden Beach Homestay",
+        "category": "Hotel",
+        "osm_id": 11496844069,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.782733,
+          13.3482445
+        ]
+      },
+      "properties": {
+        "name": "Central Park",
+        "category": "Hotel",
+        "osm_id": 11873763248,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7403332,
+          13.3368783
+        ]
+      },
+      "properties": {
+        "name": "Machali",
+        "category": "Restaurant",
+        "osm_id": 11873780196,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7895576,
+          13.3527504
+        ]
+      },
+      "properties": {
+        "name": "Kyoto",
+        "category": "Restaurant",
+        "osm_id": 11874456639,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.789571,
+          13.352652
+        ]
+      },
+      "properties": {
+        "name": "Home Town Galleria",
+        "category": "Hotel",
+        "osm_id": 11874456641,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7897,
+          13.3526558
+        ]
+      },
+      "properties": {
+        "name": "Vito's",
+        "category": "Restaurant",
+        "osm_id": 11874456642,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7829119,
+          13.3491069
+        ]
+      },
+      "properties": {
+        "name": "Onesta",
+        "category": "Restaurant",
+        "osm_id": 11875472374,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7876345,
+          13.3514469
+        ]
+      },
+      "properties": {
+        "name": "Green Park",
+        "category": "Hotel",
+        "osm_id": 11876169125,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7849936,
+          13.3476303
+        ]
+      },
+      "properties": {
+        "name": "Charcoal BBQ",
+        "category": "Restaurant",
+        "osm_id": 11877088916,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7830379,
+          13.3612255
+        ]
+      },
+      "properties": {
+        "name": "The Laughing Buddha",
+        "category": "Restaurant",
+        "osm_id": 11878213615,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7894388,
+          13.3527086
+        ]
+      },
+      "properties": {
+        "name": "Pai Tiffins",
+        "category": "Restaurant",
+        "osm_id": 11880467076,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6987472,
+          13.3620374
+        ]
+      },
+      "properties": {
+        "name": "Nemo's Paradise",
+        "category": "Restaurant",
+        "osm_id": 11882976903,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7118132,
+          13.3893599
+        ]
+      },
+      "properties": {
+        "name": "Hotel Satkar",
+        "category": "Restaurant",
+        "osm_id": 12539005949,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7373035,
+          13.3859296
+        ]
+      },
+      "properties": {
+        "name": "Hotel Hotte Thumba",
+        "category": "Restaurant",
+        "osm_id": 12541981235,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7376509,
+          13.3859047
+        ]
+      },
+      "properties": {
+        "name": "Sangam Restaurant",
+        "category": "Restaurant",
+        "osm_id": 12599680614,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7344362,
+          13.345176
+        ]
+      },
+      "properties": {
+        "name": "Ratna Residency",
+        "category": "Hotel",
+        "osm_id": 13065763701,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7492435,
+          13.3440925
+        ]
+      },
+      "properties": {
+        "name": "White Lotus",
+        "category": "Hotel",
+        "osm_id": 13176396101,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7490264,
+          13.3432278
+        ]
+      },
+      "properties": {
+        "name": "Hotel Balaji",
+        "category": "Restaurant",
+        "osm_id": 13397600678,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7491479,
+          13.343233
+        ]
+      },
+      "properties": {
+        "name": "Cafya Restaurant",
+        "category": "Restaurant",
+        "osm_id": 13397600679,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.750779,
+          13.3428358
+        ]
+      },
+      "properties": {
+        "name": "Hotel Amrith Sagar",
+        "category": "Restaurant",
+        "osm_id": 13397600683,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.750728,
+          13.3408765
+        ]
+      },
+      "properties": {
+        "name": "Udupi Cafe",
+        "category": "Restaurant",
+        "osm_id": 13397611831,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.701952,
+          13.3517321
+        ]
+      },
+      "properties": {
+        "name": "Sai Sagar",
+        "category": "Restaurant",
+        "osm_id": 13397738240,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6985035,
+          13.3593783
+        ]
+      },
+      "properties": {
+        "name": "The Toddy cafe",
+        "category": "Restaurant",
+        "osm_id": 13397738292,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6988265,
+          13.359462
+        ]
+      },
+      "properties": {
+        "name": "Mahakali Food corner",
+        "category": "Restaurant",
+        "osm_id": 13397738293,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6992267,
+          13.3620769
+        ]
+      },
+      "properties": {
+        "name": "Sea Breeze seafood",
+        "category": "Restaurant",
+        "osm_id": 13397755719,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6983859,
+          13.3624063
+        ]
+      },
+      "properties": {
+        "name": "Hotel Thonse",
+        "category": "Restaurant",
+        "osm_id": 13397755738,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6985415,
+          13.3622783
+        ]
+      },
+      "properties": {
+        "name": "Fish Kitchen",
+        "category": "Restaurant",
+        "osm_id": 13397755739,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6981105,
+          13.3627806
+        ]
+      },
+      "properties": {
+        "name": "Fish Heaven",
+        "category": "Restaurant",
+        "osm_id": 13397755740,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6980947,
+          13.3629115
+        ]
+      },
+      "properties": {
+        "name": "home meal",
+        "category": "Restaurant",
+        "osm_id": 13397755741,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.706077,
+          13.3615565
+        ]
+      },
+      "properties": {
+        "name": "Sri Mahakali",
+        "category": "Restaurant",
+        "osm_id": 13397755856,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7037639,
+          13.3602238
+        ]
+      },
+      "properties": {
+        "name": "Malpe Hotel",
+        "category": "Restaurant",
+        "osm_id": 13397755868,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7473984,
+          13.3408762
+        ]
+      },
+      "properties": {
+        "name": "Malige Tiffins",
+        "category": "Restaurant",
+        "osm_id": 13400872729,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7471924,
+          13.3415302
+        ]
+      },
+      "properties": {
+        "name": "Hotel Udupi",
+        "category": "Restaurant",
+        "osm_id": 13400872745,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.749295,
+          13.3427943
+        ]
+      },
+      "properties": {
+        "name": "Zaitoon",
+        "category": "Restaurant",
+        "osm_id": 13400872746,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7535034,
+          13.3458397
+        ]
+      },
+      "properties": {
+        "name": "Paakashala",
+        "category": "Restaurant",
+        "osm_id": 13591784979,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6993774,
+          13.3623647
+        ]
+      },
+      "properties": {
+        "name": "Bajal",
+        "category": "Restaurant",
+        "osm_id": 13591984173,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7032569,
+          13.3625404
+        ]
+      },
+      "properties": {
+        "name": "Kotian Bamboo Chef",
+        "category": "Restaurant",
+        "osm_id": 13595225308,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7520064,
+          13.3411763
+        ]
+      },
+      "properties": {
+        "name": "Krishna Matha Udupi",
+        "category": "Temple",
+        "osm_id": 133179873,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7522083,
+          13.3407975
+        ]
+      },
+      "properties": {
+        "name": "Sri Chandramauleeshwara Temple",
+        "category": "Temple",
+        "osm_id": 133180145,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7524848,
+          13.3402635
+        ]
+      },
+      "properties": {
+        "name": "Puttige Matha",
+        "category": "Temple",
+        "osm_id": 133181379,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7527032,
+          13.3403482
+        ]
+      },
+      "properties": {
+        "name": "Sode Mutt",
+        "category": "Temple",
+        "osm_id": 133181619,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7527832,
+          13.3421871
+        ]
+      },
+      "properties": {
+        "name": "Geetha Mandir Udupi",
+        "category": "Temple",
+        "osm_id": 133242919,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7526583,
+          13.3410074
+        ]
+      },
+      "properties": {
+        "name": "Shree Kaniyoor Math",
+        "category": "Temple",
+        "osm_id": 133242977,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7522596,
+          13.3416671
+        ]
+      },
+      "properties": {
+        "name": "Vasanata Mantapa and Bhojana Shaale",
+        "category": "Temple",
+        "osm_id": 133242998,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7520959,
+          13.3422878
+        ]
+      },
+      "properties": {
+        "name": "Raajangana",
+        "category": "Temple",
+        "osm_id": 133243002,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7511427,
+          13.340774
+        ]
+      },
+      "properties": {
+        "name": "Palimaaru Mutt Udupi",
+        "category": "Temple",
+        "osm_id": 133243035,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.751059,
+          13.3410535
+        ]
+      },
+      "properties": {
+        "name": "Sri Raghavendra Swamy Matha",
+        "category": "Temple",
+        "osm_id": 133243048,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7511801,
+          13.3403174
+        ]
+      },
+      "properties": {
+        "name": "Pejavara Mutt Udupi",
+        "category": "Temple",
+        "osm_id": 133243052,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7469792,
+          13.3325983
+        ]
+      },
+      "properties": {
+        "name": "T M A Pai Hospital",
+        "category": "Hospital",
+        "osm_id": 133252684,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7372044,
+          13.3491668
+        ]
+      },
+      "properties": {
+        "name": "Sharada International",
+        "category": "Restaurant",
+        "osm_id": 133641236,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7752006,
+          13.3946139
+        ]
+      },
+      "properties": {
+        "name": "Kolalagiri Government Hospital",
+        "category": "Hospital",
+        "osm_id": 133723420,
+        "address": "Kolalagiri",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7493804,
+          13.3361164
+        ]
+      },
+      "properties": {
+        "name": "Hotel Diana",
+        "category": "Restaurant",
+        "osm_id": 134018673,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.748294,
+          13.3396812
+        ]
+      },
+      "properties": {
+        "name": "Lalith Hospital",
+        "category": "Hospital",
+        "osm_id": 134019926,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.748124,
+          13.3413438
+        ]
+      },
+      "properties": {
+        "name": "Siddarth",
+        "category": "Hotel",
+        "osm_id": 134019927,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.746967,
+          13.3407241
+        ]
+      },
+      "properties": {
+        "name": "Janardhana",
+        "category": "Hotel",
+        "osm_id": 134023567,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7496736,
+          13.3441068
+        ]
+      },
+      "properties": {
+        "name": "Ramakrishna Lodge",
+        "category": "Hotel",
+        "osm_id": 134023568,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.742142,
+          13.3339763
+        ]
+      },
+      "properties": {
+        "name": "Ajjarkaadu Government Hospital",
+        "category": "Hospital",
+        "osm_id": 134024870,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7307298,
+          13.3371917
+        ]
+      },
+      "properties": {
+        "name": "Mahakali and Janardhana Temple",
+        "category": "Temple",
+        "osm_id": 134024872,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7465334,
+          13.3428859
+        ]
+      },
+      "properties": {
+        "name": "Kediyoor",
+        "category": "Hotel",
+        "osm_id": 135257138,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7493841,
+          13.3369831
+        ]
+      },
+      "properties": {
+        "name": "7 Bees Cafe",
+        "category": "Restaurant",
+        "osm_id": 159456224,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7489564,
+          13.3439843
+        ]
+      },
+      "properties": {
+        "name": "Gandhi Hospital",
+        "category": "Hospital",
+        "osm_id": 173007566,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7463479,
+          13.3393911
+        ]
+      },
+      "properties": {
+        "name": "City Hospital",
+        "category": "Hospital",
+        "osm_id": 173008150,
+        "address": "Brahmagiri, Udupi",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6989842,
+          13.3606898
+        ]
+      },
+      "properties": {
+        "name": "Paradise Isle Resort",
+        "category": "Hotel",
+        "osm_id": 173009720,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7450968,
+          13.3382943
+        ]
+      },
+      "properties": {
+        "name": "New City Hospital",
+        "category": "Hospital",
+        "osm_id": 173019941,
+        "address": "Opp Shanieshwara Temple Vidyaranya Marg Kadbettu",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7485401,
+          13.3390769
+        ]
+      },
+      "properties": {
+        "name": "Government Women & Children Hospital",
+        "category": "Hospital",
+        "osm_id": 186116648,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7874571,
+          13.3564441
+        ]
+      },
+      "properties": {
+        "name": "Sodexho",
+        "category": "Restaurant",
+        "osm_id": 186258451,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7783081,
+          13.338539
+        ]
+      },
+      "properties": {
+        "name": "Indrali Temple",
+        "category": "Temple",
+        "osm_id": 286440387,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7491745,
+          13.3400866
+        ]
+      },
+      "properties": {
+        "name": "Hotel Sriram Residency",
+        "category": "Hotel",
+        "osm_id": 407921309,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7841844,
+          13.3526036
+        ]
+      },
+      "properties": {
+        "name": "Hotel Tranquil",
+        "category": "Hotel",
+        "osm_id": 408570513,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7955039,
+          13.3539242
+        ]
+      },
+      "properties": {
+        "name": "Chef Plates",
+        "category": "Restaurant",
+        "osm_id": 408586525,
+        "address": "Udupi-Agumbe Road",
+        "phone": "077188 31979",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7946175,
+          13.3471468
+        ]
+      },
+      "properties": {
+        "name": "Sindhi Mess",
+        "category": "Restaurant",
+        "osm_id": 408597617,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7681792,
+          13.3586289
+        ]
+      },
+      "properties": {
+        "name": "Sri Durga Adi Shakthi Temple",
+        "category": "Temple",
+        "osm_id": 409455044,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7267039,
+          13.323666
+        ]
+      },
+      "properties": {
+        "name": "Shenoy Hotel",
+        "category": "Restaurant",
+        "osm_id": 435753329,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7174463,
+          13.3284145
+        ]
+      },
+      "properties": {
+        "name": "Sea View Resort",
+        "category": "Hotel",
+        "osm_id": 435756487,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7248429,
+          13.3297638
+        ]
+      },
+      "properties": {
+        "name": "Durga",
+        "category": "Restaurant",
+        "osm_id": 435769791,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7247646,
+          13.3297402
+        ]
+      },
+      "properties": {
+        "name": "Jyoti bar",
+        "category": "Restaurant",
+        "osm_id": 435769792,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.736738,
+          13.3246394
+        ]
+      },
+      "properties": {
+        "name": "Jayadurga Parameshwari",
+        "category": "Temple",
+        "osm_id": 435780620,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6975298,
+          13.3619698
+        ]
+      },
+      "properties": {
+        "name": "Malpe Beach",
+        "category": "Beach",
+        "osm_id": 627844513,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7942814,
+          13.337331
+        ]
+      },
+      "properties": {
+        "name": "Temple Arbi falls",
+        "category": "Temple",
+        "osm_id": 709859586,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7851108,
+          13.3591937
+        ]
+      },
+      "properties": {
+        "name": "Radisson Country Inn",
+        "category": "Hotel",
+        "osm_id": 1279418019,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7876264,
+          13.3507587
+        ]
+      },
+      "properties": {
+        "name": "Dr. T. M. A. Pai Museum",
+        "category": "Museum",
+        "osm_id": 1279552971,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6965835,
+          13.390741
+        ]
+      },
+      "properties": {
+        "name": "Aasare Beach",
+        "category": "Beach",
+        "osm_id": 1355346378,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.752714,
+          13.3407465
+        ]
+      },
+      "properties": {
+        "name": "Sri Vidyavarindhi Teerta",
+        "category": "Temple",
+        "osm_id": 1460745661,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7512042,
+          13.3404569
+        ]
+      },
+      "properties": {
+        "name": "Sri Uttaradi math",
+        "category": "Temple",
+        "osm_id": 1460745664,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6987355,
+          13.361776
+        ]
+      },
+      "properties": {
+        "name": "The King of good time",
+        "category": "Restaurant",
+        "osm_id": 1460761592,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.6992485,
+          13.3624739
+        ]
+      },
+      "properties": {
+        "name": "Malpe Inn",
+        "category": "Hotel",
+        "osm_id": 1461491607,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7514622,
+          13.3400331
+        ]
+      },
+      "properties": {
+        "name": "Adamaru Matha Sri Narahari Teertha Samsthana",
+        "category": "Temple",
+        "osm_id": 6106954,
+        "address": "Maruthi Veethika, Thenkpete",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7516739,
+          13.340783
+        ]
+      },
+      "properties": {
+        "name": "Sri Anantheshwara Temple",
+        "category": "Temple",
+        "osm_id": 19994568,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7516588,
+          13.3413602
+        ]
+      },
+      "properties": {
+        "name": "Shiruru Mutt Udupi",
+        "category": "Temple",
+        "osm_id": 19994569,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.7029833,
+          13.3614525
+        ]
+      },
+      "properties": {
+        "name": "Sri Vadabhanda Balarama",
+        "category": "Temple",
+        "osm_id": 19994785,
+        "address": "",
+        "phone": "",
+        "website": ""
+      }
+    }
+  ]
+}
