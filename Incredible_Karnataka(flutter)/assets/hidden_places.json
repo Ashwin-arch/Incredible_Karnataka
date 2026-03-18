@@ -1,0 +1,962 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Narasimha Jharni Cave Temple",
+                "district": "Bidar",
+                "category": "Religious",
+                "description": "Cave Temple for sustainable tourism.",
+                "detailed_description": "The Narasimha Jharni Cave Temple in Bidar is an extraordinary subterranean pilgrimage site dedicated to Lord Narasimha, the fourth avatar of Lord Vishnu. Situated within a 300-meter tunnel under the Manichoola hill range, the temple provides a unique spiritual adventure where devotees must wade through a perennial, waist-deep sulfurous stream to reach the sanctum. Geologically, the water emerges through natural tubular springs in the lateritic rock, creating a constant flow believed to have ancient healing properties. The site\u2019s history is intertwined with the legend of the demon Jharasura, whose request to eternally worship at the Lord\u2019s feet resulted in the continuous water flow. As a focal point for sustainable spiritual tourism, the temple balances high pilgrim influx with geological preservation. Visiting Narasimha Jharni is both a test of faith and an immersive natural encounter, standing as a highlight of North Karnataka\u2019s heritage.",
+                "highlights": [
+                    "Perennial stream pilgrimage",
+                    "self-manifested Narasimha idol",
+                    "sulfurous healing waters."
+                ],
+                "tourism_type": "Pilgrimage / Heritage / Adventure",
+                "nearby_attractions": [
+                    "Bidar Fort",
+                    "Gurudwara Nanak Jhira Sahib."
+                ],
+                "image_url": "/images/places/narasimha_jharni.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=17.9008,77.5483"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.5483,
+                    17.9008
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Basavakalyan Fort",
+                "district": "Bidar",
+                "category": "Heritage",
+                "description": "Historic Fort highlighting heritage sites.",
+                "detailed_description": "Basavakalyan Fort, an imposing 10th-century sentinel in Bidar, represents the architectural zenith of the Kalyana Chalukyas. Originally the seat of the royal capital, this strategic citadel features a unique defensive layout of three concentric walls and seven gateways, cleverly camouflaged by the natural hilly terrain. Beyond its military prowess, the fort is the cradle of the 12th-century Sharana movement led by social reformer Basaveshwara. It served as a vibrant hub for linguistic, social, and religious revolutions that championed equality. The structures within, from the Rajmahal to the intricate Talim Khana, showcase layers of history from Islamic and Deccan influences. Today, it stands as a testament to the region's diverse heritage and the flourishing of Jainism and Virashaivism. Sustainable conservation efforts by local communities continue to keep the history of this \"Golden City\" alive for future generations.",
+                "highlights": [
+                    "Akhand Darwaza entrance",
+                    "ancient Talim Khana (gymnasium)",
+                    "panoramic views from the bastions."
+                ],
+                "tourism_type": "Heritage / Cultural / Archeological",
+                "nearby_attractions": [
+                    "Basaveshwara Statue",
+                    "Basavakalyan Temple."
+                ],
+                "image_url": "/images/places/basavakalyan_fort.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=17.8747,76.9490"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.9490,
+                    17.8747
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Papnash Temple",
+                "district": "Bidar",
+                "category": "Religious",
+                "description": "Ancient Temple site.",
+                "detailed_description": "Papnash Temple, nestled in a lush valley in Basavakalyan, is one of the most spiritually significant sites in the Bidar district. Mythologically, the original Shiva Linga is believed to have been installed by Lord Rama himself during his return journey from Lanka to cleanse his soul\u2014a legend that gives the site its name, meaning \"Destroyer of Sins.\" The temple is famous for its sacred natural spring-fed pond, the Papnash Lake, whose waters are said to remain at a constant level year-round. Historically, Basavakalyan was the cradle of the 12th-century Vachana movement led by Basaveshwara, and the temple reflects this era of social and spiritual reform. Visitors are uniquely permitted to directly offer prayers and touch the three Shiva Lingas in the sanctum. Surrounded by thick green orchards and a serene landscape, the temple complex serves as a profound retreat for pilgrims seeking both spiritual redemption and the historical essence of the Kalyani Chalukyas.",
+                "highlights": [
+                    "Sacred Papnash Lake (Kalyani)",
+                    "Triple Shivalingas",
+                    "Basavakalyan historical trail."
+                ],
+                "tourism_type": "Spiritual / Religious / Heritage",
+                "nearby_attractions": [
+                    "Basavakalyan Fort",
+                    "108ft Basavanna Statue."
+                ],
+                "image_url": "/images/places/papnash_temple.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=17.8853,77.5145"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.5145,
+                    17.8853
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Buddha Vihar",
+                "district": "Kalaburagi",
+                "category": "Heritage",
+                "description": "Monument set amid ecological landscapes.",
+                "detailed_description": "Buddha Vihar in Kalaburagi is a majestic spiritual sanctuary and one of the largest Buddhist complexes in South India. Inaugurated by the Dalai Lama in 2007, this modern architectural marvel seamlessly blends styles from Sanchi, Sarnath, and Ajanta. The main structure is crowned by a stunning dome tiled with white marble chips, standing as a symbol of peace and non-violence in the historic Deccan region. Inside, an 8.5-foot gold-coated Buddha idol, the tallest of its kind in the region, welcomes seekers of tranquility. The Vihar is more than a temple; it is a center for meditation, Dhamma studies, and interfaith dialogue, set amidst 18 acres of serene landscapes. By promoting the teachings of the four noble truths, it honors the legacy of Dr. B.R. Ambedkar and the ancient Buddhist roots of Karnataka, offering a profound retreat for pilgrims and tourists alike.",
+                "highlights": [
+                    "8.5ft Gold-coated Buddha statue",
+                    "White marble dome",
+                    "48ft Ashoka Pillars."
+                ],
+                "tourism_type": "Spiritual / Heritage / Cultural",
+                "nearby_attractions": [
+                    "Gulbarga Fort",
+                    "Sharana Basaveshwara Temple."
+                ],
+                "image_url": "/images/places/buddha_vihar.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=17.3277,76.8343"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.8343,
+                    17.3277
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Chandralamba Temple",
+                "district": "Kalaburagi",
+                "category": "Religious",
+                "description": "Historic Temple.",
+                "detailed_description": "Chandralamba Temple in Sannati is a paramount Shakti Peetha and a site of world-class archaeological significance. Located on the left bank of the Bhima River, the temple is dedicated to an incarnation of Goddess Lakshmi who, according to legend, saved the region from an evil tyrant. While the spiritual aura of the 600-year-old temple draws thousands, it is the 1986 \"accidental\" discovery of Emperor Ashoka\u2019s rock edicts within the complex that placed Sannati on the global map. These edicts, written in Brahmi script, are the only major Ashokan inscriptions found in Karnataka. Further excavations have unearthed one of India's largest Buddhist stupas at nearby Kanaganahalli, including a unique portrait of Ashoka. The site represents a rare intersection of Hindu tradition and Mauryan Buddhist history. Preservation efforts by the ASI make Sannati a destination where visitors can walk between ancient spiritual layers, from the banks of the Bhima to the monumental dawn of the Mauryan Empire.",
+                "highlights": [
+                    "Ashokan Rock Edicts",
+                    "Ancient Chandralamba shrine",
+                    "Kanaganahalli Buddhist Stupa."
+                ],
+                "tourism_type": "Heritage / Spiritual / Archeological",
+                "nearby_attractions": [
+                    "Nagavi Ghatikasthana",
+                    "Gulbarga Fort."
+                ],
+                "image_url": "/images/places/chandralamba_temple_sannati.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=16.8755,76.7772"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.7772,
+                    16.8755
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sharan Basaveshwara Temple",
+                "district": "Kalaburagi",
+                "category": "Religious",
+                "description": "Famous temple focal point.",
+                "detailed_description": "The Sharan Basaveshwara Temple is the spiritual heart of Kalaburagi, dedicated to the 18th-century saint and philosopher Shri Sharana Basaveshwara. Revered for his teachings of \"Dasoha\" (selfless giving) and \"Kayaka\" (dignity of labor), the saint\u2019s life work transformed the social fabric of the Deccan. The temple, built in 1822, is a stunning masterclass in the fusion of Hindu and Islamic (Deccan) architectural styles, featuring intricate stone carvings of peacocks and serpents paired with elegant arches. The sanctum houses the saint's samadhi, an epicenter of peace where thousands gather during the annual Rathotsava or Car Festival. Adjacent to the serene Sharanabasaveshwara Lake, the temple complex also hosts a museum of sacred relics. It remains a vibrant hub of community service, where the tradition of providing free food and spiritual discourse has continued unbroken for over two centuries, making it a living monument to the egalitarian values of North Karnataka.",
+                "highlights": [
+                    "Saint's Samadhi shrine",
+                    "Intricate Hindu-Islamic architecture",
+                    "Sharanabasaveshwara Lake."
+                ],
+                "tourism_type": "Spiritual / Cultural / Heritage",
+                "nearby_attractions": [
+                    "Gulbarga Fort",
+                    "Khwaja Bande Nawaz Dargah."
+                ],
+                "image_url": "/images/places/sharan_basaveshwara_temple.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=17.3347,76.8346"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.8346,
+                    17.3347
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jaladurga Fort",
+                "district": "Raichur",
+                "category": "Heritage",
+                "description": "Island fort for scenic exploration.",
+                "detailed_description": "Jaladurga Fort, or the \"Fort on Water,\" is a rugged island citadel uniquely positioned within the crystalline curves of the Krishna River in Raichur. Originally founded by the Kakatiyas and later a stronghold for the Adil Shahis, the fort\u2019s geography served as a natural barrier, with the river providing a formidable defense. Perched on a massive basaltic hill, the fort offers breathtaking aerial views of the river cascading over boulders, known as Jaladurga Falls. The site is a treasure trove of mystery, featuring underground tunnels, granaries, and the legendary \"punishment point\" where intruders were historically cast into the current. Despite its ruined state, it remains a premier destination for offbeat adventure tourism. Current heritage development initiatives aim to preserve its stone inscriptions and ancient temples, ensuring that this hidden gem continues to reflect the storied history of North Karnataka's riverine defenses.",
+                "highlights": [
+                    "Jaladurga Falls view",
+                    "underground secret passages",
+                    "Sangameshwara Matha."
+                ],
+                "tourism_type": "Adventure / Heritage / Offbeat",
+                "nearby_attractions": [
+                    "Raichur Fort",
+                    "Mudagal Fort."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Raichur_Fort_1.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=16.2070,77.3425"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.3425,
+                    16.2070
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ek Minar Ki Masjid",
+                "district": "Raichur",
+                "category": "Heritage",
+                "description": "Heritage mosque.",
+                "detailed_description": "Ek Minar Ki Masjid is one of Raichur\u2019s most iconic and oldest Islamic monuments, commissioned in 1513 CE by Malik Ambar during the Bahmani Sultanate. True to its name, the mosque is distinguished by a singular, majestic 65-foot Persian-style minaret that dominates the city's skyline. The minaret features a winding internal staircase leading to a gallery that offers a stunning 360-degree panoramic view of Raichur\u2019s historic landscape. Architecturally, the mosque is a fascinating hybrid of local Deccan and Persian styles, with its stone-carved entrance and simple yet elegant prayer hall. Historically, it served as a spiritual lighthouse for the region\u2019s diverse population. As a state-protected monument, it represents the architectural transitions of the 16th century. For visitors, it offers a peaceful retreat and a vertical journey into the heart of Raichur's medieval urban heritage, standing as a sentinel of time and architectural beauty.",
+                "highlights": [
+                    "Climbing the 65ft minaret",
+                    "360-degree city panorama",
+                    "Ancient Bahmani-era inscriptions."
+                ],
+                "tourism_type": "Heritage / Archeological / Cultural",
+                "nearby_attractions": [
+                    "Raichur Fort",
+                    "Jami Masjid."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Ek_Minar_Masjid%2C_Raichur.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=16.2120,77.3560"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.3560,
+                    16.2120
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Manvi Island",
+                "district": "Raichur",
+                "category": "Nature",
+                "description": "Natural island for scenic exploration.",
+                "detailed_description": "Naradagadde is a serene riverine island nestled in the center of the mighty Krishna River, revered by locals as a haven of spiritual tranquility. According to local lore, the island is the site where the celestial sage Narada performed rigorous penance, earning it immense religious significance. Accessible only by traditional coracles (round boats), the journey to the island is as mystical as the destination itself, cutting through the swirling river currents and lush green landscapes. The island houses an ancient temple where thousands gather during the annual river fairs. Beyond its spiritual allure, Naradagadde is a burgeoning spot for eco-tourism, offering bird-watching opportunities and a primitive lifestyle that remains untouched by modern commercialization. It serves as a vital model for riverine conservation and low-impact tourism, providing a rare chance to experience the raw, rhythmic pulse of the Krishna River and the legends that flow along with it.",
+                "highlights": [
+                    "Coracle river crossing",
+                    "Naradagadde Temple",
+                    "Riverbank nature trails."
+                ],
+                "tourism_type": "Spiritual / Eco / Exploration",
+                "nearby_attractions": [
+                    "Jaladurga Fort",
+                    "Kurugadde Island."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Raichur_Fort_3.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=16.1992,77.3358"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.3358,
+                    16.1992
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Yana Rocks",
+                "district": "Uttara Kannada",
+                "category": "Nature",
+                "description": "Geological wonders and coastal forts.",
+                "detailed_description": "Yana Rocks, nestled in the Katgal range of the Western Ghats in Uttara Kannada, are two massive black crystalline limestone outcrops that rise dramatically above the dense evergreen canopy. Standing 120 and 90 meters tall, Bhairaveshwara Shikhara and Mohini Shikhara are geological marvels formed through millions of years of natural weathering. The site is steeped in mythology, believed to be where the demon Bhasmasura was reduced to ashes by Lord Vishnu's Mohini avatar. Beyond its spiritual allure at the base cave temple, Yana is a global benchmark for eco-tourism, recognized as one of India's cleanest villages. Its commitment to sustainability preserves a biodiversity hotspot rich in endemic flora. For tourists, Yana offers a serene trekking experience through crystalline streams and lush forests, making it a premier destination for nature exploration and geological study.",
+                "highlights": [
+                    "Bhairaveshwara Shikhara cave temple",
+                    "self-manifested Shiva Linga",
+                    "scenic forest trekking trails."
+                ],
+                "tourism_type": "Eco / Adventure / Geological",
+                "nearby_attractions": [
+                    "Vibhuti Falls",
+                    "Mirjan Fort."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Yana_Rocks.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=14.5896,74.5740"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.5740,
+                    14.5896
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Magod Falls",
+                "district": "Uttara Kannada",
+                "category": "Nature",
+                "description": "Beautiful Waterfall.",
+                "detailed_description": "Magod Falls is a breathtaking two-tiered waterfall where the Bedti River plunges 200 meters into a rocky chasm, creating a thunderous symphony in the heart of the Malenadu wilderness. Surrounded by dense, evergreen forests of the Western Ghats, the falls are a masterpiece of vertical geography and untouched nature. The site is a haven for biodiversity, offering glimpses of rare birds and butterflies endemic to the region. Historically, the area has been a source of local folklore and a silent witness to the region's ancient tribal traditions. Sustainability efforts here focus on maintaining the pristine forest corridor and preventing commercial encroachment. For travelers, the viewpoint at Magod offers a raw, unfiltered encounter with Karnataka's monsoon power, making it a premier destination for landscape photographers and those seeking the soul of the wilderness.",
+                "highlights": [
+                    "200m vertical drop",
+                    "Panoramic valley viewpoints",
+                    "Dense forest trekking trails."
+                ],
+                "tourism_type": "Eco / Nature / Photography",
+                "nearby_attractions": [
+                    "Jenukallu Gudda",
+                    "Sathodi Falls."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Kuli_magod_falls.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=14.7457,74.4293"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.4293,
+                    14.7457
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mirjan Fort",
+                "district": "Uttara Kannada",
+                "category": "Heritage",
+                "description": "Coastal fort with geological significance.",
+                "detailed_description": "Mirjan Fort, a coastal masterpiece in Uttara Kannada, is famously associated with Rani Chennabhairadevi, the \"Pepper Queen\" of Gersoppa who dominated the global spice trade for decades. Built in the 16th century with locally sourced laterite stones, the fort\u2019s high double walls and circular bastions were designed to protect the lucrative export of pepper and saltpetre. Its architectural charm is most apparent during the monsoon, when the walls are enveloped in vibrant green moss, creating a fairy-tale-like setting. The fort features a sophisticated ancient water management system, including interconnected wells and a protective moat. Archaeological finds here, from gold coins to Chinese porcelain, highlight its role as a global transit hub. Managed by the ASI, Mirjan Fort stands as a symbol of female leadership and the historical prosperity of the Kanara coast, offering tourists a blend of history, photography, and panoramic riverine views.",
+                "highlights": [
+                    "Moss-covered laterite walls (post-monsoon)",
+                    "ancient water harvesting systems",
+                    "high watchtowers."
+                ],
+                "tourism_type": "Heritage / Photography / Coastal",
+                "nearby_attractions": [
+                    "Gokarna Beaches",
+                    "Yana Rocks."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Mirjan_fort%2817%29.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=14.4870,74.4221"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.4221,
+                    14.4870
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ottinene Beach",
+                "district": "Udupi",
+                "category": "Nature",
+                "description": "Pristine beach for coastal tourism.",
+                "detailed_description": "Ottinene Beach, where the Sumana River gracefully meets the Arabian Sea, is one of Udupi\u2019s most serene and photographically stunning \"secret\" beaches. Historically, this coastline has been a tranquil haven for local fishing communities, far removed from the bustling ports of the south. The beach is unique for its elevated viewpoint atop a laterite hill, offering a breathtaking perspective of the river\u2019s estuary and the turquoise expanse of the sea. Geologically, the area features rugged cliff formations that contrast with the soft white sands below. Sustainability here is driven by community-led beach clean-ups and a focus on keeping the fragile estuarine ecosystem undisturbed. For tourists, Ottinene offers the perfect blend of a forest trek and a beach retreat, making it a premier spot for watching spectacular sunsets in an atmosphere of absolute coastal silence.",
+                "highlights": [
+                    "Estuary viewpoint",
+                    "lush forest-to-beach trails",
+                    "serene sunset photography."
+                ],
+                "tourism_type": "Coastal / Eco / Photography",
+                "nearby_attractions": [
+                    "Maravanthe Beach",
+                    "Murudeshwar Temple."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Karighatta_1.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=13.9743,74.6457"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.6457,
+                    13.9743
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kodi Bengre",
+                "district": "Udupi",
+                "category": "Nature",
+                "description": "Scenic beach stretch.",
+                "detailed_description": "Kodi Bengre, also known as Delta Beach, is a narrow, scenic strip of land where the Suvarna River merges into the Arabian Sea near Udupi. Historically a quiet fishing village, it has evolved into a premier destination for offbeat travelers and India\u2019s burgeoning surfing community. The geography of the \"Delta\" creates a unique landscape of backwaters on one side and the crashing sea on the other, lined with swaying coconut palms. This site is a model for responsible coastal tourism, with local surf schools emphasizing ocean conservation and sustainable livelihood for the fishing families. Visitors can enjoy fresh, locally sourced seafood at \"shacks\" or take a meditative walk along the estuary. Whether seeking the thrill of the waves or the stillness of the backwaters, Kodi Bengre offers a raw and rhythmic encounter with the dual nature of Karnataka\u2019s water-rich coastline.",
+                "highlights": [
+                    "Surfing lessons",
+                    "scenic river-sea confluence",
+                    "traditional toddy-shop seafood."
+                ],
+                "tourism_type": "Coastal / Adventure / Eco",
+                "nearby_attractions": [
+                    "Malpe Beach",
+                    "St. Mary's Island."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/St._Mary%27s_Islands%2C_Malpe_beach%2C_Karnataka_03.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=13.3702,74.7004"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.7004,
+                    13.3702
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "St Mary's Island",
+                "district": "Udupi",
+                "category": "Nature",
+                "description": "Unique geological island formation.",
+                "detailed_description": "St. Mary's Island, off the coast of Malpe, is a geological wonder recognized globally for its unique hexagonal columnar basaltic rock formations. These distinctive structures were formed 88 million years ago due to volcanic activity when Madagascar was still attached to the Indian subcontinent. Legend also links the island to Vasco da Gama, who is said to have landed here in 1498 and named it in honor of the Virgin Mary. Designated as a National Geological Monument, the island offers a landscape unlike any other in India, with shores covered in polished shells instead of sand. As a benchmark for sustainable tourism, the island is a plastic-free zone and emphasizes the preservation of its rare basaltic heritage. For visitors, the crystalline sunset views against the vertical geometric columns provide an unearthly and breathtaking experience, making it a must-visit for nature enthusiasts and photographers.",
+                "highlights": [
+                    "Hexagonal basaltic formations",
+                    "shell-covered beaches",
+                    "Malpe ferry experience."
+                ],
+                "tourism_type": "Coastal / Eco / Photography",
+                "nearby_attractions": [
+                    "Malpe Beach",
+                    "Udupi Krishna Temple."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/St_Mary%27s_Island.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=13.3797,74.6790"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    74.6790,
+                    13.3797
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Gudavi Bird Sanctuary",
+                "district": "Shivamogga",
+                "category": "Nature",
+                "description": "Wildlife sanctuary in the Ghats.",
+                "detailed_description": "Gudavi Bird Sanctuary, spread across a sprawling lake in the Soraba taluk of Shivamogga, is one of the most vibrant avian refuges in South India. Historically, the Gudavi Lake has been a perennial source of water for the region, and its dense canopy of trees has attracted migratory birds for centuries. During the monsoon and post-monsoon months, the sanctuary transforms into a noisy, bustling nursery for over 200 species, including Herons, Egrets, and the majestic Painted Storks. The site is a cornerstone of wetland conservation, with efforts focused on protecting the nesting sites from human interference and maintaining the lake's water quality. For nature lovers, the sanctuary offers a gentle trek through the woods and a chance to observe the complex social lives of birds from well-placed watchtowers. It remains a tranquil and essential green corridor in the heart of the Malenadu region.",
+                "highlights": [
+                    "Bird-watching watchtowers",
+                    "migratory Painted Stork colonies",
+                    "scenic forest lake environment."
+                ],
+                "tourism_type": "Eco / Wildlife / Nature",
+                "nearby_attractions": [
+                    "Jog Falls",
+                    "Sagar Heritage Route."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Gudavi_bird_sanctuary1_JEG9230.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=14.2065,75.0664"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.0664,
+                    14.2065
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Kunchikal Falls",
+                "district": "Shivamogga",
+                "category": "Nature",
+                "description": "High waterfall set in the Ghats.",
+                "detailed_description": "Kunchikal Falls, hidden in the Agumbe valley of Shivamogga, is India\u2019s highest waterfall, formed by the Varahi River cascading down 455 meters. Historically, this site has been a symbol of the raw, untamed power of the Western Ghats' monsoons. Unlike a singular plunge, Kunchikal is a tiered, stepped waterfall that weaves through rugged boulders and dense rainforest. However, its flow is now regulated by the Mani Dam hydroelectric project, making its full glory a rare sight often reserved for the peak monsoon season. The area is a vital part of the Agumbe Rainforest ecosystem, world-renowned for its biodiversity and as a sanctuary for the King Cobra. Sustainability here involves a delicate balance between power generation and habitat preservation. For the intrepid traveler, reaching the vicinity of Kunchikal offers a glimpse into one of the most mysterious and water-rich corners of the Indian subcontinent.",
+                "highlights": [
+                    "455m tiered cascade",
+                    "Varahi River valley views",
+                    "Agumbe rainforest trek."
+                ],
+                "tourism_type": "Nature / Adventure / Eco",
+                "nearby_attractions": [
+                    "Agumbe Sunset Point",
+                    "Mani Dam."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Kunchikal_falls.png",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=13.4356,75.0774"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.0774,
+                    13.4356
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Agumbe Sunset Point",
+                "district": "Shivamogga",
+                "category": "Nature",
+                "description": "Breathtaking viewpoint.",
+                "detailed_description": "Agumbe, known as the \"Cherrapunji of the South,\" is a highland village in Shivamogga famous for its record-breaking rainfall and its breathtaking Sunset Point. Historically, Agumbe was a quiet mountain pass used by traders, but it gained global fame as the setting for the TV series 'Malgudi Days'. The Sunset Point, perched at 2,100 feet, offers a panoramic view of the sun dipping into the Arabian Sea across the vast Udupi plains. Geologically, Agumbe sits on the crest of the Western Ghats, serving as a critical hub for rainforest research and the conservation of the King Cobra. Sustainability is a way of life here, with the Agumbe Rainforest Research Station (ARRS) leading the charge in tropical ecology. For tourists, a visit to the Sunset Point is a meditative experience, where the interplay of mist, mountains, and the golden hour creates a truly ethereal coastal-mountain horizon.",
+                "highlights": [
+                    "Arabian Sea horizon view",
+                    "King Cobra conservation trails",
+                    "Barkana Falls."
+                ],
+                "tourism_type": "Eco / Adventure / Photography",
+                "nearby_attractions": [
+                    "Malgudi Days House",
+                    "Kundadri Hill."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/View_from_sunset_point%2C_Agumbe_%2816017939927%29.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=13.5077,75.0903"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.0903,
+                    13.5077
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Ballalarayana Durga",
+                "district": "Chikkamagaluru",
+                "category": "Adventure",
+                "description": "Trekking peak with historic fort ruins.",
+                "detailed_description": "Ballalarayana Durga is a majestic 12th-century hill fort perched atop a towering peak in the Western Ghats of Chikkamagaluru. Built by the Hoysala Empire under King Ballala I, the fort served as a strategic outpost for monitoring the coastal plains of Tulu Nadu. Today, only its weathered stone walls and massive gateways remain, standing as silent witnesses to centuries of Deccan history. The geography of the site is its true crown; reachable only by a challenging trek through shola grasslands and dense \"mist-forests,\" it offers 360-degree views of the sprawling Netravati river valley. Sustainability in this fragile high-altitude ecosystem is critical, with local trekking groups promoting \"leave no trace\" principles to protect the endemic flora. For adventurers, Ballalarayana Durga represents the ultimate intersection of medieval military history and the raw, unbridled beauty of the Malenadu wilderness.",
+                "highlights": [
+                    "High-altitude shola trek",
+                    "Netravati valley panorama",
+                    "ancient stone fort ruins."
+                ],
+                "tourism_type": "Adventure / Heritage / Eco",
+                "nearby_attractions": [
+                    "Rani Jhari Viewpoint",
+                    "Kalasa Temple."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/View_from_sunset_point%2C_Agumbe_%2816017939927%29.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=13.2671,75.7280"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.7280,
+                    13.2671
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Mullayanagiri Peak",
+                "district": "Chikkamagaluru",
+                "category": "Nature",
+                "description": "Highest peak in Karnataka.",
+                "detailed_description": "Mullayanagiri, standing at 6,330 feet, is the highest peak in Karnataka and a premier destination for mountain lovers. Named after the saint Mullappa Swamy, who is said to have meditated in a small cave near the summit, the peak is a sacred site of spiritual and natural harmony. Historically, the peak has been a part of the Baba Budangiri range, the cradle of India's coffee culture. The geography is characterized by rolling shola grasslands and steep precipices that are often shrouded in a thick velvet of mist. Sustainability initiatives at the peak focus on managing the high tourist footfall to prevent soil erosion and preserve the endemic biodiversity of the high-altitude ecosystem. Whether climbing the 500 stone steps to the summit temple or trekking the ridge from Bababudangiri, visitors are rewarded with an \"above the clouds\" experience that defines the majestic spirit of the Western Ghats.",
+                "highlights": [
+                    "Summit Temple & Cave",
+                    "Panoramic mountain ridge treks",
+                    "Coffee plantation vistas."
+                ],
+                "tourism_type": "Adventure / Nature / Spiritual",
+                "nearby_attractions": [
+                    "Baba Budangiri",
+                    "Jhari Falls."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Agumbe_View_point.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=13.3833,75.7219"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.7219,
+                    13.3833
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jhari Falls",
+                "district": "Chikkamagaluru",
+                "category": "Nature",
+                "description": "Scenic waterfall in the hills.",
+                "detailed_description": "Jhari Falls, popularly known as \"Buttermilk Falls\" due to its frothy, white appearance, is a hidden cascade tucked away within the private coffee estates of the Baba Budangiri range. Historically, these falls have been a well-kept secret of the local plantation owners, recently becoming a cherished spot for eco-tourists. The water originates from the high-altitude shola streams, plunging over segmented rock faces to create a wide, curtain-like effect. The geography of the falls, surrounded by towering silver oak trees and aromatic coffee bushes, offers a sensory experience unique to the Malenadu region. Sustainability here is managed through controlled jeep access, ensuring that the heavy tourist influx does not pollute the pristine water source. For visitors, the short but bumpy jeep ride through the estates adds an element of adventure, leading to a refreshing natural pool that is as pure as it is scenic.",
+                "highlights": [
+                    "Segmented \"Buttermilk\" cascade",
+                    "Off-road jeep adventure",
+                    "natural freshwater pool."
+                ],
+                "tourism_type": "Eco / Nature / Adventure",
+                "nearby_attractions": [
+                    "Mullayanagiri",
+                    "Baba Budangiri."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Karighatta.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=13.3717,75.6935"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.6935,
+                    13.3717
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Sanapur Lake",
+                "district": "Koppal",
+                "category": "Nature",
+                "description": "Serene lake near Hampi.",
+                "detailed_description": "Sanapur Lake, a tranquil sapphire oasis amidst the ancient, boulder-strewn landscape of Hampi, is an irrigation reservoir that dates back to the ingenuity of the Vijayanagara Dynasty. Unlike the bustling temple ruins across the river, Sanapur offers a quiet retreat where the deep blue waters contrast sharply with the sun-baked, terracotta-colored hills. The lake is historically significant as part of the complex water management systems that once supported the royal city, and it is mythologically linked to the monkey kingdom of Kishkindha. Visitors can enjoy traditional coracle rides, navigating the calm waters as local boatmen share stories of the land's spiritual heritage. The surrounding green paddy fields and granite monoliths make it a premier spot for cliff jumping, swimming, and nature photography. As a model for low-impact tourism, Sanapur Lake remains a primitive and peaceful escape, preserving the rugged natural beauty that has enchanted travelers for centuries.",
+                "highlights": [
+                    "Coracle boat rides",
+                    "Cliff jumping spots",
+                    "Panoramic boulder-landscape views."
+                ],
+                "tourism_type": "Eco / Adventure / Photography",
+                "nearby_attractions": [
+                    "Virupaksha Temple",
+                    "Hippie Island."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sanapur_Lake.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=15.3423,76.4643"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.4643,
+                    15.3423
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Anegundi Heritage Village",
+                "district": "Koppal",
+                "category": "Heritage",
+                "description": "Heritage village near Hampi.",
+                "detailed_description": "Anegundi, the ancient \"Monkey Kingdom\" of Kishkindha mentioned in the Ramayana, is a living heritage village that predates the Vijayanagara Empire. Situated on the northern banks of the Tungabhadra, it served as the original capital before the royal center shifted to Hampi. The village is an open-air museum of medieval architecture, featuring the Gagan Mahal palace, ancient stone gates, and the Ranganatha Temple. Beyond its royal history, Anegundi is a global model for sustainable rural tourism through the Kishkindha Trust, which empowers local women to create crafts from banana fiber and maintains heritage homestays. The landscape is a mystical blend of emerald paddy fields and massive crystalline boulders, offering a glimpse into a way of life that has remained rhythmic and traditional for centuries. It is the soul of the Hampi region, where mythology, history, and community conservation meet.",
+                "highlights": [
+                    "Gagan Mahal palace ruins",
+                    "Banana fiber craft workshops",
+                    "Coracle river crossings."
+                ],
+                "tourism_type": "Heritage / Cultural / Eco",
+                "nearby_attractions": [
+                    "Anjanadri Hill",
+                    "Pampa Sarovar."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Main_Entrance_of_Anegundi_Fort_%2801%29.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=15.3494,76.4773"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.4773,
+                    15.3494
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Anjanadri Hill",
+                "district": "Koppal",
+                "category": "Adventure",
+                "description": "Trekking hill, believed to be the birthplace of Hanuman.",
+                "detailed_description": "Anjanadri Hill, rising majestically above the northern banks of the Tungabhadra, is spiritually revered as the birthplace of Lord Hanuman. Named after his mother, Anjana Devi, the hill is a pivotal site in the Ramayana landscape, forming the heart of the mythical kingdom of Kishkindha. A climb of 575 stone steps leads to a modest yet powerful white temple at the summit, where continuous chanting of the Hanuman Chalisa echoes through the air. The hilltop offers a breathtaking 360-degree panorama of the UNESCO World Heritage Hampi ruins, the winding river, and a sea of coconut plantations. This site is a unique blend of geological antiquity\u2014featuring some of the oldest rock formations on Earth\u2014and deep-rooted faith. Sustainability initiatives focus on maintaining the sanctity of this biodiversity-rich hill, which serves as a sanctuary for both pilgrims and the local simian population, preserving its status as one of Karnataka's most sacred and scenic peaks.",
+                "highlights": [
+                    "575-step summit climb",
+                    "Anjanadevi Temple",
+                    "Sunrise & Sunset vistas over the Tungabhadra."
+                ],
+                "tourism_type": "Spiritual / Trekking / Heritage",
+                "nearby_attractions": [
+                    "Anegundi Village",
+                    "Pampa Sarovar."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Anjanadri_Hill_Temple.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=15.3532,76.4809"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.4809,
+                    15.3532
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Karighatta Hill",
+                "district": "Mandya",
+                "category": "Nature",
+                "description": "Hill with scenic views near Mysore.",
+                "detailed_description": "Karighatta Hill, or the \"Black Hill,\" is a historic and botanical sanctuary situated at the confluence of the Kaveri and Lokapavani rivers near Srirangapatna. Standing at 2,697 feet, the hill is home to the ancient Dravidian-style Venkataramanaswamy Temple, which dates back to the Hoysala and Vijayanagara eras. It is chemically significant for its \"Darbe\" grass, used in Hindu rituals, which legend says grew from the hair of Lord Vishnu in his Varaha avatar. Karighatta is a testament to community-led conservation, with local groups pioneering a low-cost drip irrigation system using recycled bottles to reforest the hill's dry scrub slopes. For visitors, the 450-step climb or the winding road offers a tranquil escape with views of the sprawling Mysore plains and the historic silhouette of Tipu Sultan\u2019s island fortress. The hill remains a vital ecological corridor for migratory birds and a peaceful retreat for spiritual seekers and nature enthusiasts alike.",
+                "highlights": [
+                    "Venkataramanaswamy Temple",
+                    "Kaveri-Lokapavani Sangama viewpoint",
+                    "Reforestation nature trails."
+                ],
+                "tourism_type": "Spiritual / Eco / Heritage",
+                "nearby_attractions": [
+                    "Ranganathittu Bird Sanctuary",
+                    "Tipu Sultan's Palace."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Karighatta.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=12.4257,76.6803"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.6803,
+                    12.4257
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Shimsha Falls",
+                "district": "Mandya",
+                "category": "Nature",
+                "description": "Waterfall in the Mysore region.",
+                "detailed_description": "Shivanasamudra Falls is one of India's most powerful natural wonders, where the Kaveri River branches to form the twin falls of Gaganachukki and Barachukki. Historically, this site is the cradle of South Asia\u2019s modern energy, hosting the first major hydroelectric power station in the East, established in 1902 to power the Kolar Gold Fields. The falls are a \"segmented\" marvel, with water tumbling over ancient rock faces in multiple side-by-side cascades. While Gaganachukki offers a thunderous horsetail plunge, Barachukki is known for its wide, graceful curtain of water. Surrounded by the dense forests of the Cauvery Wildlife Sanctuary, the area is a vital habitat for diverse flora and fauna. Sustainability here is linked to both energy production and nature tourism, encouraging visitors to witness the seasonal transformation of the river from a gentle stream into a roaring colossus. It stands as a monumental intersection of pioneering engineering and raw, pristine geography.",
+                "highlights": [
+                    "Gaganachukki horsetail view",
+                    "Barachukki coracle rides",
+                    "1902 Hydroelectric heritage site"
+                ],
+                "tourism_type": "Nature / Engineering / Exploration",
+                "nearby_attractions": [
+                    "Talakadu Temples",
+                    "Cauvery Wildlife Sanctuary"
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Barachukki_Falls%2C_Shivanasamudra.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=12.3384,77.0231"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    77.0231,
+                    12.3384
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "KRS Dam",
+                "district": "Mandya",
+                "category": "Nature",
+                "description": "Major dam and garden near Mysore.",
+                "detailed_description": "The Krishna Raja Sagara (KRS) Dam is a feat of early 20th-century engineering, envisioned by Sir M. Visvesvaraya as the lifeblood of South Karnataka\u2019s agriculture. Built across the Kaveri River, the dam created a massive reservoir that transformed the arid Mandya plains into a fertile sugarcane heartland. Below the dam lies the legendary Brindavan Gardens, a symmetric masterpiece of terraced lawns, topiary, and choreographed musical fountains, modeled after the Shalimar Gardens of Kashmir. Historically, the project was funded by the Mysore Royalty's personal jewelry, symbolizing a deep commitment to public welfare. Sustainability is central to KRS, as it manages the water security for millions while serving as a hub for eco-aware tourism. The illuminated evening displays and the sheer scale of the gravity dam continue to draw thousands, celebrating the intersection of visionary planning, royal patronage, and hydraulic majesty.",
+                "highlights": [
+                    "Musical fountain show (evening)",
+                    "symmetric terraced gardens",
+                    "panoramic dam-top walk."
+                ],
+                "tourism_type": "Engineering / Cultural / Family",
+                "nearby_attractions": [
+                    "Srirangapatna",
+                    "Mysore Palace."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/KRS_dam.JPG",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=12.4218,76.5732"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.5732,
+                    12.4218
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Lakkundi Heritage Site",
+                "district": "Gadag",
+                "category": "Heritage",
+                "description": "Ancient temples and archaeological sites.",
+                "detailed_description": "Lakkundi, an ancient \"Temple City\" in the Gadag district, is an open-air archive of Western Chalukyan architectural evolution. During the 11th and 12th centuries, Lakkundi was a major financial and cultural capital, hosting over 50 magnificent temples and 29 ornate stepwells (Kalyanis). The site is famous for the Kasivisvesvara Temple, which showcases the transition to more intricate, ornate carvings using green schist stone. Historically, the city was also a major center for minting coins and advanced water management, as seen in the beautifully tiered Manikeshwara stepwell. Sustainability here is driven by the ASI\u2019s restoration projects and local heritage awareness, preserving the delicate stone screens and lathe-turned pillars that characterize this \"Golden Age\" of Deccan art. For travelers, Lakkundi offers a quiet, unhurried journey into the intricate soul of medieval Karnataka, where every stone tells a story of artistic and economic prosperity.",
+                "highlights": [
+                    "Kasivisvesvara Temple carvings",
+                    "Manikeshwara stepwell (Kalyani)",
+                    "Lakkundi Sculpture Gallery."
+                ],
+                "tourism_type": "Heritage / Archeological / Cultural",
+                "nearby_attractions": [
+                    "Trikuteshwara Temple",
+                    "Gadag City."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lakkundi_Temples.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=15.4571,75.7548"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.7548,
+                    15.4571
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Trikuteshwara Temple",
+                "district": "Gadag",
+                "category": "Religious",
+                "description": "Historic temple complex.",
+                "detailed_description": "Trikuteshwara Temple in Gadag is a peerless gem of Western Chalukyan architecture, celebrated for its intricate stone-carving mastery and spiritual uniqueness. Built between the 10th and 12th centuries, the temple is dedicated to the Hindu Trinity\u2014represented by three Shiva Lingas carved onto a single stone. The complex is also famous for its Saraswati shrine, which, despite ancient vandalism, remains one of the most beautiful examples of medieval Indian art, featuring life-sized sculptures and lathe-turned soapstone pillars that appear polished to a mirror finish. Historically, the temple was a center for the Kalamukha sect and a hub of intellectual flourishing in the Deccan. Preservation efforts by the ASI maintain the temple as a living monument, where every pillar and screen-wall tells a story of the North Karnataka \"Golden Age\" of craftsmanship. It offers a meditative and artistic journey into the soul of India\u2019s medieval heritage.",
+                "highlights": [
+                    "Unique Triple Shivalinga",
+                    "Lathe-turned soapstone pillars",
+                    "Intricate Saraswati shrine carvings."
+                ],
+                "tourism_type": "Heritage / Archeological / Spiritual",
+                "nearby_attractions": [
+                    "Lakkundi Heritage Site",
+                    "Dambal Dodda Basappa Temple."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Trikuteshwara_temple_complex_at_Gadag.JPG",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=15.4297,75.6301"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.6301,
+                    15.4297
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Dambal Buddhist Site",
+                "district": "Gadag",
+                "category": "Heritage",
+                "description": "Archaeological Buddhist site.",
+                "detailed_description": "The Dodda Basappa Temple in Dambal is a breathtaking 12th-century masterpiece of Western Chalukyan architecture, renowned for its unique stellate or star-shaped floor plan. Unlike any other temple in its class, its exterior wall features 24 pointed projections that rotate continuously, creating a stunning play of light and shadow across its soapstone surface. Named after the massive Nandi (bull) statue anchored at its eastern entrance, the temple was originally founded by royal officer Ajjayanayaka. Historically, Dambal was a vibrant multi-faith center where Buddhism and Hinduism flourished side-by-side. The temple\u2019s meticulously carved pillars and seven-tiered vimana represent a pinnacle of medieval artistry. As a protected monument, it serves as a silent witness to a prosperous era of trade and intellectual exchange, offering visitors a rare glimpse into the mathematical and aesthetic genius of ancient India.",
+                "highlights": [
+                    "Massive Nandi (Dodda Basappa) idol",
+                    "Uniquely rotating star-plan walls",
+                    "Intricate soapstone carvings."
+                ],
+                "tourism_type": "Heritage / Archeological / Cultural",
+                "nearby_attractions": [
+                    "Lakkundi Heritage Site",
+                    "Trikuteshwara Temple."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/12th_century_Dodda_Basappa_temple%2C_Dambal%2C_Karnataka_India_-_127.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=15.3444,75.5732"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    75.5732,
+                    15.3444
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Jogimatti Hills",
+                "district": "Chitradurga",
+                "category": "Nature",
+                "description": "Hills for adventure and history.",
+                "detailed_description": "Jogimatti, often called the \"Ooty of Central Karnataka,\" is the highest hill station in the Chitradurga district, standing at 3,803 feet. Named after a revered local saint who once meditated in its cool, mist-covered valleys, the hills offer a stark ecological contrast to the surrounding semi-arid plains. Historically, the area was a royal hunting ground for the Maharajas and features a century-old bungalow built by the British in 1905. The hills are a critical biodiversity sanctuary, home to a wide range of flora, fauna, and the spectacular Himavatkedara waterfall, which trickles into a natural cave housing a Shiva Lingam. As one of the windiest regions in Asia, the hills are a focal point for renewable energy and wildlife conservation. For trekkers and nature lovers, Jogimatti provides a refreshing micro-climate, panoramic canyon views, and a peaceful retreat into the rugged, prehistoric landscapes of the Deccan.",
+                "highlights": [
+                    "Himavatkedra cave waterfall",
+                    "1905 British hilltop bungalow",
+                    "Panoramic canyon views."
+                ],
+                "tourism_type": "Eco / Trekking / Adventure",
+                "nearby_attractions": [
+                    "Chitradurga Fort",
+                    "Chandravalli Caves."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Lake_outside_Chandravalli_caves_%289131479363%29.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=14.2273,76.4051"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.4051,
+                    14.2273
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Chandravalli Caves",
+                "district": "Chitradurga",
+                "category": "Heritage",
+                "description": "Archaeological cave site.",
+                "detailed_description": "Chandravalli, an archaeological valley in Chitradurga, is a profound subterranean record of Karnataka\u2019s history, spanning from the Iron Age to the Kadamba and Hoysala dynasties. The site is famous for its semi-monastic cave systems, which descend deep into the earth through narrow passages and chambered rooms once used by saints for meditation. Historically, excavations here have unearthed ornaments, pottery, and coins from the Roman Empire, highlighting ancient global trade links. The geography is characterized by massive granite boulders and the serene Chandravalli Lake, which serves as a perennial water source. Sustainability at the site is managed through ASI-led conservation of the rock-cut structures and the surrounding ecological park. For history buffs and cave explorers, Chandravalli offers a dark, cool, and mystical journey into the prehistoric and medieval underworld of the Deccan.",
+                "highlights": [
+                    "Rock-cut meditation chambers",
+                    "ancient cave paintings",
+                    "scenic Chandravalli Lake."
+                ],
+                "tourism_type": "Archeological / Heritage / Exploration",
+                "nearby_attractions": [
+                    "Chitradurga Fort",
+                    "Jogimatti Hills."
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Lake_outside_Chandravalli_caves_%289131479363%29.jpg",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=14.2056,76.3925"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.3925,
+                    14.2056
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Vani Vilasa Dam",
+                "district": "Chitradurga",
+                "category": "Nature",
+                "description": "Historic dam for adventure and history.",
+                "detailed_description": "Vani Vilasa Sagara, popularly known as Mari Kanive, is the oldest dam in Karnataka and a visionary masterpiece of pre-independence engineering. Commissioned by the Maharajas of Mysore and completed in 1907, the dam was built without any cement, using only locally sourced surki mortar and stones. Historically, it was named after the Dowager Maharani Vani Vilasa Sannidhana, reflecting the royalty's dedication to irrigation in the drought-prone Hiriyur region. The geography of the dam is stunning, with two massive hills serving as natural flanks for the reservoir, creating a landscape reminiscent of a Scottish loch. Sustainability is at the core of its legacy, having provided water security for over a century. For tourists, the dam offers a serene, wind-swept escape with panoramic views of the blue expanse and the historic \"Mari\" temple at its base, celebrating a century of royal vision and hydraulic engineering.",
+                "highlights": [
+                    "View dari top dam bridge",
+                    "Mari Temple at the base",
+                    "Panoramic reservoir sunsets"
+                ],
+                "tourism_type": "Engineering / Heritage / Nature",
+                "nearby_attractions": [
+                    "Jogimatti Hills",
+                    "Chitradurga Fort"
+                ],
+                "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/KRS_dam.JPG",
+                "google_maps_link": "https://www.google.com/maps/search/?api=1&query=14.3197,76.3082"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    76.3082,
+                    14.3197
+                ]
+            }
+        }
+    ]
+}
