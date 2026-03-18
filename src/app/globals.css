@@ -16,6 +16,15 @@ html {
   --ink: #0D0906;
   --ink2: #1C1208;
   --ink3: #2A1F10;
+  
+  /* Cultural Palette */
+  --k-red: #D91B23;    /* Traditional Kumkum Red */
+  --k-yellow: #FFCD00; /* Rajyotsava Yellow */
+  --k-orange: #F58220; /* Kesari Orange */
+  --k-blue: #1E40AF;   /* Royal Blue */
+  --k-violet: #6D28D9; /* Mysuru Violet */
+  --k-skin: #F5CBA7;   /* Traditional Skin Tone */
+
   --amber: #E07C1A;
   --amber2: #C46010;
   --gold: #C8951C;
@@ -32,9 +41,9 @@ html {
   --r-md: 0.75rem;
   --r-lg: 1.25rem;
   --r-xl: 2rem;
-  --shadow-card: 0 2px 16px rgba(0, 0, 0, 0.18);
-  --shadow-hover: 0 8px 40px rgba(0, 0, 0, 0.28);
-  --trans: 0.25s ease;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 12px 48px rgba(0, 0, 0, 0.2);
+  --trans: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {

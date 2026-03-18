@@ -10,23 +10,30 @@ import {
 
 // ── Color System ──────────────────────────────────────────────────
 const C = {
-  bg: "#1A0A2E",
-  bgDeep: "#0D0618",
+  bg: "#0D0618",
+  bgDeep: "#05020A",
+  red: "#D91B23",
+  yellow: "#FFCD00",
+  orange: "#F58220",
+  blue: "#1E40AF",
+  violet: "#6D28D9",
+  skin: "#F5CBA7",
   purple1: "#804A8A",
   purple2: "#3A0353",
-  gold1: "#F8D299",
-  gold2: "#F59E51",
-  surface: "rgba(58,3,83,0.45)",
-  glass: "rgba(128,74,138,0.18)",
-  text: "#F0E6FF",
+  gold1: "#FFCD00", // Using Rajyotsava Yellow as primary gold
+  gold2: "#F58220", // Using Kesari Orange as secondary gold
+  surface: "rgba(109,40,217,0.1)", // Mysore Violet based surface
+  glass: "rgba(245,130,32,0.1)", // Orange glass
+  text: "#F8F2E6",
   muted: "#B89EC4",
   white: "#FFFFFF",
-  card: "rgba(26,10,46,0.7)",
+  card: "rgba(20,10,30,0.8)",
 };
 
-const gradPurple = `linear-gradient(145deg, ${C.purple1}, ${C.purple2})`;
-const gradGold = `linear-gradient(145deg, ${C.gold1}, ${C.gold2})`;
-const gradBg = `linear-gradient(160deg, #2D0A4E 0%, #1A0A2E 40%, #0D0618 100%)`;
+const gradPurple = `linear-gradient(135deg, ${C.violet}, ${C.purple2})`;
+const gradGold = `linear-gradient(135deg, ${C.yellow}, ${C.orange})`;
+const gradBg = `linear-gradient(160deg, #1A0A2E 0%, #0D0618 40%, #05020A 100%)`;
+const gradCultural = `linear-gradient(135deg, ${C.red} 0%, ${C.orange} 50%, ${C.yellow} 100%)`; // Rajyotsava gradient
 
 const S = {
   app: {
@@ -41,7 +48,7 @@ const S = {
   },
   phone: {
     width: "100%",
-    maxWidth: 1200,
+    maxWidth: "1440px", // Increased for desktop view
     minHeight: "100vh",
     background: gradBg,
     position: "relative",
@@ -49,6 +56,7 @@ const S = {
     boxShadow: "0 0 50px rgba(0,0,0,0.5)",
     display: "flex",
     flexDirection: "column",
+    margin: "0 auto",
   },
   screen: {
     width: "100%",
@@ -63,12 +71,15 @@ const S = {
     display: "flex",
     flexDirection: "row",
     height: "100vh",
-    overflow: "hidden"
+    overflow: "hidden",
+    position: "relative",
   },
   mainArea: {
     flex: 1,
     overflowY: "auto",
     position: "relative",
+    scrollBehavior: "smooth",
+    paddingBottom: "80px", // Space for bottom nav on mobile
   }
 };
 
@@ -156,10 +167,10 @@ function BottomNav({ active, navigate, lang }) {
   ];
   return (
     <div className="mobile-nav" style={{
-      position: "absolute", bottom: 0, left: 0, right: 0,
-      width: "100%", background: "rgba(13,6,24,0.92)", backdropFilter: "blur(20px)",
-      borderTop: "1px solid rgba(128,74,138,0.3)",
-      display: "flex", justifyContent: "space-around", padding: "10px 0 16px", zIndex: 100,
+      position: "fixed", bottom: 0, left: 0, right: 0,
+      width: "100%", background: "rgba(13,6,24,0.95)", backdropFilter: "blur(20px)",
+      borderTop: `1px solid ${C.orange}33`,
+      display: "flex", justifyContent: "space-around", padding: "10px 0 16px", zIndex: 1000,
     }}>
       {tabs.map(({ id, Icon, label }) => (
         <button key={id} onClick={() => navigate(id)} style={{
@@ -186,15 +197,23 @@ function SideNav({ active, navigate, lang }) {
   ];
   return (
     <div className="desktop-nav" style={{
-      width: 240, height: "100vh", background: "rgba(13,6,24,0.6)", backdropFilter: "blur(20px)",
-      borderRight: "1px solid rgba(128,74,138,0.3)",
-      display: "flex", flexDirection: "column", padding: "32px 16px", zIndex: 100,
+      width: 280, height: "100vh", background: "rgba(13,6,24,0.8)", backdropFilter: "blur(20px)",
+      borderRight: "1px solid rgba(245,130,32,0.2)",
+      display: "flex", flexDirection: "column", padding: "32px 20px", zIndex: 100,
     }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 40, padding: "0 12px" }}>
-        <div style={{ width: 36, height: 36, borderRadius: 10, background: gradGold, display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <Landmark size={20} color="#3A0353" />
+      <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 44, padding: "0 12px" }}>
+        <div style={{ 
+          width: 42, height: 42, borderRadius: 12, 
+          background: gradCultural, 
+          display: "flex", alignItems: "center", justifyContent: "center",
+          boxShadow: `0 4px 15px ${C.orange}44`
+        }}>
+          <Landmark size={24} color="#fff" />
         </div>
-        <div style={{ fontSize: 18, fontWeight: 800, color: C.white }}>Karnataka</div>
+        <div>
+          <div style={{ fontSize: 13, fontWeight: 700, color: C.orange, letterSpacing: 1, textTransform: "uppercase" }}>Incredible</div>
+          <div style={{ fontSize: 20, fontWeight: 900, color: C.white, lineHeight: 1 }}>Karnataka</div>
+        </div>
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -218,21 +237,21 @@ function SideNav({ active, navigate, lang }) {
 }
 
 const PLACES = [
-  { id: 1, name: "MTR – Mavalli Tiffin Rooms", category: "food", location: "Lalbagh Rd, Bengaluru", distance: "0.8 km", rating: 4.8, authenticity: 96, popularity: 94, desc: "Since 1924, MTR has been serving legendary South Indian breakfasts. A 100-year tradition of pure vegetarian Karnataka cuisine that has fed generations.", tags: ["Heritage", "Vegetarian", "Breakfast"], color: "#FF6B6B", reviews: [{ user: "Priya K.", text: "Best Rava Idli in the world. No exaggeration.", stars: 5 }, { user: "Arjun M.", text: "The masala dosa here is legendary. Must visit!", stars: 5 }] },
-  { id: 2, name: "Channapatna Toy Village", category: "handicrafts", location: "Channapatna, Ramanagara", distance: "58 km", rating: 4.6, authenticity: 98, popularity: 82, desc: "GI-tagged wooden toys crafted using centuries-old techniques. Artisan families pass down this craft, creating vibrant lacquerware pieces unique to Karnataka.", tags: ["GI Tag", "Artisan", "Heritage Craft"], color: "#4ECDC4", reviews: [{ user: "Sneha R.", text: "Incredible craftsmanship. Bought toys for entire family!", stars: 5 }, { user: "Dev P.", text: "Authentic experience, straight from the artisans.", stars: 4 }] },
-  { id: 3, name: "Hampi Ruins & Virupaksha Temple", category: "tourist", location: "Hampi, Ballari District", distance: "340 km", rating: 4.9, authenticity: 99, popularity: 97, desc: "UNESCO World Heritage Site. The ruins of the Vijayanagara Empire spread across 26 sq km of otherworldly boulder landscapes. A photographer's paradise.", tags: ["UNESCO", "Ancient", "Must Visit"], color: "#F59E51", reviews: [{ user: "Rahul S.", text: "Absolutely breathtaking. Best place I've visited in India.", stars: 5 }, { user: "Meera T.", text: "The sunrise at Matanga Hill is life-changing.", stars: 5 }] },
-  { id: 4, name: "Evolve Back – Coorg Resort", category: "stays", location: "Pollibetta, Coorg", distance: "255 km", rating: 4.7, authenticity: 89, popularity: 91, desc: "Luxury boutique resort nestled in coffee plantations. Experience Kodava culture, plantation walks, and farm-to-table dining in the misty hills of Coorg.", tags: ["Luxury", "Nature", "Coffee Country"], color: "#A8E6CF", reviews: [{ user: "Vikram N.", text: "Perfect honeymoon destination. Magical atmosphere.", stars: 5 }, { user: "Ananya B.", text: "The coffee estate walk is simply beautiful.", stars: 4 }] },
-  { id: 5, name: "Commercial Street Market", category: "shops", location: "Commercial St, Bengaluru", distance: "2.1 km", rating: 4.3, authenticity: 78, popularity: 93, desc: "Bengaluru's most iconic shopping street. From silk sarees and bangles to street food and boutique stores – this 100-year-old market has everything.", tags: ["Shopping", "Iconic", "Street Market"], color: "#C7A2FF", reviews: [{ user: "Lavanya K.", text: "Best place for ethnic wear shopping!", stars: 4 }, { user: "Rohan D.", text: "Bargaining skills required. Worth every penny.", stars: 4 }] },
-  { id: 6, name: "Coorg Coffee Estates Tour", category: "tourist", location: "Madikeri, Coorg", distance: "260 km", rating: 4.8, authenticity: 95, popularity: 88, desc: "Walk through lush Arabica coffee plantations, learn the harvest process, and taste freshly brewed Coorg coffee straight from the source.", tags: ["Nature", "Experience", "Coffee"], color: "#8B5E3C", reviews: [{ user: "Nisha M.", text: "Best coffee experience of my life!", stars: 5 }] },
+  { id: 1, name: "MTR – Mavalli Tiffin Rooms", category: "food", location: "Lalbagh Rd, Bengaluru", distance: "0.8 km", rating: 4.8, authenticity: 96, popularity: 94, desc: "Since 1924, MTR has been serving legendary South Indian breakfasts. A 100-year tradition of pure vegetarian Karnataka cuisine that has fed generations.", tags: ["Heritage", "Vegetarian", "Breakfast"], color: C.red, reviews: [{ user: "Priya K.", text: "Best Rava Idli in the world. No exaggeration.", stars: 5 }, { user: "Arjun M.", text: "The masala dosa here is legendary. Must visit!", stars: 5 }] },
+  { id: 2, name: "Channapatna Toy Village", category: "handicrafts", location: "Channapatna, Ramanagara", distance: "58 km", rating: 4.6, authenticity: 98, popularity: 82, desc: "GI-tagged wooden toys crafted using centuries-old techniques. Artisan families pass down this craft, creating vibrant lacquerware pieces unique to Karnataka.", tags: ["GI Tag", "Artisan", "Heritage Craft"], color: C.orange, reviews: [{ user: "Sneha R.", text: "Incredible craftsmanship. Bought toys for entire family!", stars: 5 }, { user: "Dev P.", text: "Authentic experience, straight from the artisans.", stars: 4 }] },
+  { id: 3, name: "Hampi Ruins & Virupaksha Temple", category: "tourist", location: "Hampi, Ballari District", distance: "340 km", rating: 4.9, authenticity: 99, popularity: 97, desc: "UNESCO World Heritage Site. The ruins of the Vijayanagara Empire spread across 26 sq km of otherworldly boulder landscapes. A photographer's paradise.", tags: ["UNESCO", "Ancient", "Must Visit"], color: C.blue, reviews: [{ user: "Rahul S.", text: "Absolutely breathtaking. Best place I've visited in India.", stars: 5 }, { user: "Meera T.", text: "The sunrise at Matanga Hill is life-changing.", stars: 5 }] },
+  { id: 4, name: "Evolve Back – Coorg Resort", category: "stays", location: "Pollibetta, Coorg", distance: "255 km", rating: 4.7, authenticity: 89, popularity: 91, desc: "Luxury boutique resort nestled in coffee plantations. Experience Kodava culture, plantation walks, and farm-to-table dining in the misty hills of Coorg.", tags: ["Luxury", "Nature", "Coffee Country"], color: "#22C55E", reviews: [{ user: "Vikram N.", text: "Perfect honeymoon destination. Magical atmosphere.", stars: 5 }, { user: "Ananya B.", text: "The coffee estate walk is simply beautiful.", stars: 4 }] },
+  { id: 5, name: "Commercial Street Market", category: "shops", location: "Commercial St, Bengaluru", distance: "2.1 km", rating: 4.3, authenticity: 78, popularity: 93, desc: "Bengaluru's most iconic shopping street. From silk sarees and bangles to street food and boutique stores – this 100-year-old market has everything.", tags: ["Shopping", "Iconic", "Street Market"], color: C.violet, reviews: [{ user: "Lavanya K.", text: "Best place for ethnic wear shopping!", stars: 4 }, { user: "Rohan D.", text: "Bargaining skills required. Worth every penny.", stars: 4 }] },
+  { id: 6, name: "Coorg Coffee Estates Tour", category: "tourist", location: "Madikeri, Coorg", distance: "260 km", rating: 4.8, authenticity: 95, popularity: 88, desc: "Walk through lush Arabica coffee plantations, learn the harvest process, and taste freshly brewed Coorg coffee straight from the source.", tags: ["Nature", "Experience", "Coffee"], color: C.blue, reviews: [{ user: "Nisha M.", text: "Best coffee experience of my life!", stars: 5 }] },
 ];
 
 const CATEGORIES = [
-  { id: "all", label: "All", color: C.gold2 },
-  { id: "food", label: "Food", color: "#FF6B6B" },
-  { id: "handicrafts", label: "Crafts", color: "#4ECDC4" },
-  { id: "shops", label: "Shops", color: "#C7A2FF" },
-  { id: "tourist", label: "Tourist", color: "#F59E51" },
-  { id: "stays", label: "Stays", color: "#A8E6CF" },
+  { id: "all", label: "All", color: C.yellow },
+  { id: "food", label: "Food", color: C.red },
+  { id: "handicrafts", label: "Crafts", color: C.orange },
+  { id: "shops", label: "Shops", color: C.violet },
+  { id: "tourist", label: "Tourist", color: C.blue },
+  { id: "stays", label: "Stays", color: "#22C55E" }, // Keep a fresh green for stays/nature
 ];
 
 // ── Translation System ────────────────────────────────────────────
@@ -688,23 +707,23 @@ function SplashScreen({ onDone, lang }) {
 
   return (
     <div style={{ width: "100%", height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: gradBg, position: "relative", overflow: "hidden" }}>
-      <div style={{ position: "absolute", width: 300, height: 300, borderRadius: "50%", background: "radial-gradient(circle, rgba(128,74,138,0.3) 0%, transparent 70%)", top: -80, right: -80 }} />
-      <div style={{ position: "absolute", width: 200, height: 200, borderRadius: "50%", background: "radial-gradient(circle, rgba(245,158,81,0.2) 0%, transparent 70%)", bottom: 60, left: -50 }} />
+      <div style={{ position: "absolute", width: 400, height: 400, borderRadius: "50%", background: `radial-gradient(circle, ${C.violet}22 0%, transparent 70%)`, top: -100, right: -100 }} />
+      <div style={{ position: "absolute", width: 300, height: 300, borderRadius: "50%", background: `radial-gradient(circle, ${C.orange}11 0%, transparent 70%)`, bottom: 40, left: -60 }} />
       <div style={{ transition: "all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)", transform: phase >= 1 ? "scale(1) translateY(0)" : "scale(0.3) translateY(60px)", opacity: phase >= 1 ? 1 : 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
-        <div style={{ width: 100, height: 100, borderRadius: 28, background: gradGold, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: `0 0 40px rgba(245,158,81,0.5)` }}>
-          <Landmark size={52} color="#3A0353" strokeWidth={1.5} />
+        <div style={{ width: 110, height: 110, borderRadius: 32, background: gradCultural, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: `0 12px 40px ${C.orange}44` }}>
+          <Landmark size={58} color="#fff" strokeWidth={1.2} />
         </div>
         <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: -0.5, backgroundImage: `linear-gradient(135deg, ${C.gold1}, ${C.gold2})`, backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>{t(lang, "incredible")}</div>
-          <div style={{ fontSize: 36, fontWeight: 900, letterSpacing: -1, color: C.white, lineHeight: 1 }}>{t(lang, "karnataka")}</div>
+          <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: 2, textTransform: "uppercase", color: C.yellow }}>{t(lang, "incredible")}</div>
+          <div style={{ fontSize: 42, fontWeight: 900, letterSpacing: -1, color: C.white, lineHeight: 1 }}>{t(lang, "karnataka")}</div>
         </div>
       </div>
       <div style={{ marginTop: 32, textAlign: "center", transition: "all 0.6s ease", opacity: phase >= 2 ? 1 : 0, transform: phase >= 2 ? "translateY(0)" : "translateY(20px)" }}>
-        <p style={{ color: C.muted, fontSize: 15, letterSpacing: 2, textTransform: "uppercase" }}>{t(lang, "splashTagline")}</p>
+        <p style={{ color: C.muted, fontSize: 15, letterSpacing: 3, textTransform: "uppercase", fontWeight: 500 }}>{t(lang, "splashTagline")}</p>
       </div>
-      <div style={{ position: "absolute", bottom: 80, display: "flex", gap: 8, opacity: phase >= 1 ? 1 : 0, transition: "opacity 0.5s ease 0.8s" }}>
-        {[0, 1, 2].map(i => (
-          <div key={i} style={{ width: 6, height: 6, borderRadius: 3, background: i === 1 ? C.gold2 : C.purple1, animation: `pulse ${0.8 + i * 0.2}s ease-in-out infinite alternate` }} />
+      <div style={{ position: "absolute", bottom: 80, display: "flex", gap: 10, opacity: phase >= 1 ? 1 : 0, transition: "opacity 0.5s ease 0.8s" }}>
+        {[C.red, C.yellow, C.blue].map((col, i) => (
+          <div key={i} style={{ width: 8, height: 8, borderRadius: 4, background: col, animation: `pulse ${0.8 + i * 0.2}s ease-in-out infinite alternate` }} />
         ))}
       </div>
     </div>
@@ -826,17 +845,17 @@ function HomeScreen({ navigate, onSelectPlace, lang }) {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div>
             <p style={{ color: C.muted, fontSize: 13, margin: 0, letterSpacing: 1, display: "flex", alignItems: "center", gap: 4 }}>
-              <MapPin size={12} color={C.muted} /> {t(lang, "locationLabel")}
+              <MapPin size={12} color={C.orange} /> {t(lang, "locationLabel")}
             </p>
-            <h1 style={{ fontSize: 22, fontWeight: 800, margin: "4px 0 0", color: C.white }}>{t(lang, "discoverKarnataka")}</h1>
+            <h1 style={{ fontSize: 24, fontWeight: 900, margin: "4px 0 0", color: C.white, textTransform: "uppercase", letterSpacing: -0.5 }}>{t(lang, "discoverKarnataka")}</h1>
           </div>
-          <div style={{ width: 44, height: 44, borderRadius: 12, background: gradGold, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
-            <Bell size={20} color="#3A0353" />
+          <div style={{ width: 44, height: 44, borderRadius: 12, background: gradCultural, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", boxShadow: `0 4px 15px ${C.orange}44` }}>
+            <Bell size={20} color="#fff" />
           </div>
         </div>
-        <div style={{ marginTop: 16, display: "flex", alignItems: "center", gap: 12, background: "rgba(128,74,138,0.15)", borderRadius: 14, padding: "12px 16px", border: "1px solid rgba(128,74,138,0.3)" }}>
-          <Search size={16} color={C.muted} />
-          <span style={{ color: C.muted, fontSize: 15 }}>{t(lang, "searchPlaceholder")}</span>
+        <div style={{ marginTop: 20, display: "flex", alignItems: "center", gap: 12, background: "rgba(255,255,255,0.05)", borderRadius: 16, padding: "14px 20px", border: `1px solid ${C.orange}33`, backdropFilter: "blur(10px)" }}>
+          <Search size={18} color={C.orange} />
+          <span style={{ color: C.muted, fontSize: 15, fontWeight: 500 }}>{t(lang, "searchPlaceholder")}</span>
         </div>
       </div>
 
@@ -1307,10 +1326,19 @@ export default function App() {
           .desktop-nav { display: none !important; }
           .grid-responsive { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
           
+          /* Enhanced Responsiveness */
           @media (min-width: 768px) {
             .mobile-nav { display: none !important; }
             .desktop-nav { display: flex !important; }
-            .grid-responsive { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+            .grid-responsive { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+          }
+          
+          @media (min-width: 1024px) {
+            .grid-responsive { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+          }
+
+          @media (max-width: 480px) {
+            .grid-responsive { grid-template-columns: 1fr; }
           }
         `}</style>
       </div>
