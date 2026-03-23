@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Incredible Karnataka — Spatial Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f8fafc;--surface:rgba(255,255,255,0.95);--surface2:rgba(241,245,249,0.95);
+  --accent:#f97316;--accent2:#fbbf24;--accent3:#10b981;--blue:#3b82f6;
+  --text:#0f172a;--text2:#475569;--text3:#64748b;
+  --border:rgba(0,0,0,0.08);--border2:rgba(0,0,0,0.12);
+  --red:#ef4444;--purple:#8b5cf6;--teal:#06b6d4;--pink:#ec4899;
+  --font:'Outfit',system-ui,sans-serif;
+  --r:12px;--r-sm:8px;--r-lg:18px;
+}
+html,body{height:100%;overflow:hidden;font-family:var(--font);background:var(--bg);color:var(--text);}
+#map{width:100%;height:100vh;z-index:1;}
+
+/* Leaflet overrides */
+.leaflet-container{font-family:var(--font)!important;background:#f1f5f9;}
+.leaflet-tile-pane{filter:saturate(1.0) brightness(1.0);}
+.leaflet-control-zoom{border:none!important;box-shadow:0 4px 24px rgba(0,0,0,0.5)!important;}
+.leaflet-control-zoom a{background:var(--surface)!important;color:var(--text)!important;border:0.5px solid var(--border2)!important;font-size:18px!important;line-height:30px!important;width:32px!important;height:32px!important;font-family:var(--font)!important;}
+.leaflet-control-zoom a:hover{background:rgba(241,245,249,0.98)!important;color:var(--accent)!important;}
+
+/* Cluster styles */
+.marker-cluster-small,.marker-cluster-medium,.marker-cluster-large{
+  background:rgba(249,115,22,0.15)!important;
+}
+.marker-cluster-small div,.marker-cluster-medium div,.marker-cluster-large div{
+  background:rgba(249,115,22,0.9)!important;
+  color:#fff!important;font-family:var(--font)!important;font-weight:700!important;font-size:13px!important;
+  width:34px!important;height:34px!important;margin:3px!important;border-radius:50%!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  box-shadow:0 0 0 3px rgba(249,115,22,0.3),0 4px 12px rgba(0,0,0,0.4)!important;
+}
+
+/* Custom pin */
+.gem-pin{
+  display:flex;flex-direction:column;align-items:center;cursor:pointer;
+  transition:transform 0.2s;
+}
+.gem-pin:hover{transform:scale(1.15) translateY(-2px);}
+.pin-bubble{
+  padding:5px 10px;border-radius:20px;font-size:11px;font-weight:700;
+  display:flex;align-items:center;gap:5px;white-space:nowrap;
+  backdrop-filter:blur(12px);
+  box-shadow:0 4px 16px rgba(0,0,0,0.5);
+  border:1px solid rgba(0,0,0,0.15);
+}
+.pin-tail{width:2px;height:7px;margin:0 auto;}
+
+/* TOP BAR */
+#topbar{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;gap:10px;
+  padding:12px 16px;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(20px);
+  border-bottom:0.5px solid var(--border);
+}
+#logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+#logo-icon{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#f97316,#fbbf24);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 12px rgba(249,115,22,0.4);}
+#logo-text{line-height:1.1;}
+#logo-title{font-size:15px;font-weight:800;color:var(--text);letter-spacing:-0.3px;}
+#logo-sub{font-size:10px;color:var(--text2);font-weight:400;}
+
+#search-wrap{flex:1;max-width:480px;margin:0 auto;position:relative;}
+#search{
+  width:100%;padding:10px 44px 10px 16px;
+  background:rgba(0,0,0,0.06);
+  border:0.5px solid var(--border2);
+  border-radius:40px;
+  color:var(--text);font-size:13px;font-family:var(--font);
+  outline:none;transition:all 0.2s;
+}
+#search:focus{background:rgba(0,0,0,0.09);border-color:rgba(249,115,22,0.5);}
+#search::placeholder{color:var(--text3);}
+#search-icon{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:14px;pointer-events:none;}
+#place-count{
+  flex-shrink:0;padding:8px 14px;border-radius:40px;
+  background:rgba(249,115,22,0.12);border:0.5px solid rgba(249,115,22,0.3);
+  font-size:12px;font-weight:700;color:var(--accent);white-space:nowrap;
+}
+#filter-btn{
+  flex-shrink:0;padding:9px 16px;border-radius:40px;
+  background:rgba(0,0,0,0.06);border:0.5px solid var(--border2);
+  color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;
+  display:flex;align-items:center;gap:6px;font-family:var(--font);
+  transition:all 0.2s;white-space:nowrap;
+}
+#filter-btn:hover{background:rgba(0,0,0,0.1);color:var(--text);}
+#filter-btn.active{background:rgba(249,115,22,0.15);border-color:rgba(249,115,22,0.4);color:var(--accent);}
+
+/* SEARCH RESULTS */
+#search-results{
+  position:absolute;top:calc(100% + 6px);left:0;right:0;
+  background:var(--surface2);border:0.5px solid var(--border2);
+  border-radius:var(--r);overflow:hidden;
+  box-shadow:0 8px 32px rgba(0,0,0,0.6);
+  max-height:260px;overflow-y:auto;
+  display:none;z-index:100;
+}
+.sr-item{
+  padding:10px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;
+  border-bottom:0.5px solid rgba(0,0,0,0.05);transition:background 0.15s;
+}
+.sr-item:last-child{border-bottom:none;}
+.sr-item:hover{background:rgba(249,115,22,0.08);}
+.sr-emoji{font-size:20px;flex-shrink:0;}
+.sr-info{flex:1;min-width:0;}
+.sr-name{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.sr-meta{font-size:11px;color:var(--text2);}
+
+/* LEGEND */
+#legend{
+  position:fixed;bottom:140px;left:16px;z-index:900;
+  background:var(--surface);backdrop-filter:blur(16px);
+  border:0.5px solid var(--border);border-radius:var(--r);
+  padding:14px 16px;min-width:160px;
+}
+#legend-title{font-size:10px;font-weight:700;color:var(--text2);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;}
+.legend-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:12px;color:var(--text2);}
+.legend-row:last-child{margin-bottom:0;}
+.leg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+
+/* KARNATAKA BORDER LEGEND */
+#border-legend{
+  position:fixed;top:74px;right:16px;z-index:900;
+  background:var(--surface);backdrop-filter:blur(16px);
+  border:0.5px solid var(--border);border-radius:var(--r-sm);
+  padding:8px 14px;display:flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:600;color:var(--text2);
+}
+.border-line{width:24px;height:2px;background:linear-gradient(90deg,#f97316,#ef4444);border-radius:1px;}
+
+/* FABs */
+#fabs{position:fixed;right:16px;bottom:140px;z-index:900;display:flex;flex-direction:column;gap:8px;}
+.fab{
+  width:44px;height:44px;border-radius:12px;border:0.5px solid var(--border2);
+  background:var(--surface);backdrop-filter:blur(16px);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  font-size:18px;transition:all 0.2s;color:var(--text);
+  box-shadow:0 4px 16px rgba(0,0,0,0.4);
+}
+.fab:hover{transform:scale(1.06);border-color:rgba(249,115,22,0.4);color:var(--accent);}
+.fab.active{background:rgba(249,115,22,0.15);border-color:rgba(249,115,22,0.5);color:var(--accent);}
+
+/* BOTTOM SHEET */
+#sheet{
+  position:fixed;left:0;right:0;bottom:0;z-index:950;
+  background:var(--surface2);backdrop-filter:blur(24px);
+  border-top:0.5px solid var(--border2);
+  border-radius:22px 22px 0 0;
+  transition:transform 0.42s cubic-bezier(0.32,0.72,0,1);
+}
+#sheet.peek{transform:translateY(calc(100% - 84px));}
+#sheet.half{transform:translateY(calc(100% - 52vh));}
+#sheet.full{transform:translateY(0);}
+#sheet-handle-area{padding:10px 16px 6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;}
+#sheet-handle{width:40px;height:4px;border-radius:2px;background:rgba(0,0,0,0.15);}
+#sheet-header{display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 0 8px;}
+#sheet-title{font-size:15px;font-weight:800;color:var(--text);display:flex;align-items:center;gap:8px;}
+#sheet-count-badge{font-size:11px;font-weight:700;color:var(--accent);background:rgba(249,115,22,0.12);padding:3px 10px;border-radius:40px;border:0.5px solid rgba(249,115,22,0.25);}
+
+/* Category chips */
+#cat-bar{display:flex;gap:6px;padding:0 16px 10px;overflow-x:auto;scrollbar-width:none;}
+#cat-bar::-webkit-scrollbar{display:none;}
+.cat-chip{
+  flex-shrink:0;padding:6px 14px;border-radius:40px;
+  font-size:11px;font-weight:700;cursor:pointer;
+  border:0.5px solid rgba(0,0,0,0.1);
+  background:rgba(0,0,0,0.04);color:var(--text2);
+  font-family:var(--font);transition:all 0.18s;white-space:nowrap;
+}
+.cat-chip.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+
+/* Feed */
+#feed{padding:0 12px 80px;max-height:calc(52vh - 120px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.1) transparent;}
+.gem-card{
+  display:flex;gap:12px;padding:12px;margin-bottom:8px;
+  background:rgba(0,0,0,0.03);border-radius:14px;
+  border:0.5px solid rgba(0,0,0,0.07);cursor:pointer;
+  transition:all 0.18s;
+}
+.gem-card:hover{background:rgba(249,115,22,0.06);border-color:rgba(249,115,22,0.2);}
+.gem-card.active{background:rgba(249,115,22,0.09);border-color:rgba(249,115,22,0.35);}
+.card-thumb{
+  width:70px;height:70px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:30px;position:relative;overflow:hidden;
+}
+.card-play{
+  position:absolute;inset:0;background:rgba(0,0,0,0.4);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity 0.18s;cursor:pointer;
+}
+.gem-card:hover .card-play{opacity:1;}
+.card-body{flex:1;min-width:0;}
+.card-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.card-district{font-size:11px;color:var(--accent);font-weight:600;margin-bottom:4px;}
+.card-desc{font-size:11px;color:var(--text2);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.card-meta{display:flex;gap:8px;margin-top:6px;align-items:center;}
+.card-cat-tag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;}
+.card-rating{font-size:10px;color:var(--accent2);}
+.card-rating{font-size:10px;color:var(--accent2);}
+.card-dist{font-size:10px;color:var(--text3);}
+.card-dir-btn{margin-left:auto;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;background:var(--accent);color:#fff;text-decoration:none;transition:all 0.15s;}
+.card-dir-btn:hover{box-shadow:0 2px 8px rgba(249,115,22,0.4);transform:translateY(-1px);}
+
+/* DETAIL PANEL */
+#detail{
+  position:fixed;top:0;right:0;bottom:0;z-index:1200;
+  width:380px;max-width:100vw;
+  background:var(--surface2);backdrop-filter:blur(24px);
+  border-left:0.5px solid var(--border2);
+  transform:translateX(100%);transition:transform 0.38s cubic-bezier(0.32,0.72,0,1);
+  display:flex;flex-direction:column;overflow:hidden;
+}
+#detail.open{transform:translateX(0);}
+#detail-hero{height:220px;flex-shrink:0;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+#detail-back{position:absolute;top:12px;left:12px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);border:0.5px solid rgba(0,0,0,0.15);color:var(--text);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);}
+#detail-body{padding:18px;flex:1;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(0,0,0,0.1) transparent;}
+#detail-name{font-size:22px;font-weight:900;color:var(--text);letter-spacing:-0.5px;line-height:1.1;margin-bottom:6px;}
+#detail-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+.dtag{padding:4px 12px;border-radius:40px;font-size:11px;font-weight:700;}
+#detail-desc{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:16px;}
+#detail-dir-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:11px;margin-bottom:16px;background:var(--accent);color:#fff;border-radius:12px;font-size:13px;font-weight:700;text-decoration:none;transition:all 0.2s;box-shadow:0 4px 12px rgba(249,115,22,0.3);}
+#detail-dir-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(249,115,22,0.4);}
+#detail-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px;}
+.dinfo{background:rgba(0,0,0,0.04);border:0.5px solid var(--border);border-radius:10px;padding:10px 12px;}
+.dinfo-label{font-size:10px;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;}
+.dinfo-val{font-size:12px;color:var(--text);font-weight:500;}
+#detail-vids-title{font-size:12px;font-weight:700;color:var(--text2);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.06em;}
+#detail-vids{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
+.vid-tile{aspect-ratio:9/16;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:26px;cursor:pointer;position:relative;overflow:hidden;transition:transform 0.18s;}
+.vid-tile:hover{transform:scale(1.04);}
+.vid-tile-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.18s;}
+.vid-tile:hover .vid-tile-overlay{opacity:1;}
+
+/* FILTER PANEL */
+#filter-panel{
+  position:fixed;top:64px;right:16px;z-index:1100;
+  background:var(--surface2);backdrop-filter:blur(24px);
+  border:0.5px solid var(--border2);border-radius:var(--r);
+  padding:16px;min-width:220px;
+  transform:translateY(-10px) scale(0.97);opacity:0;pointer-events:none;
+  transition:all 0.22s cubic-bezier(0.32,0.72,0,1);
+}
+#filter-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:all;}
+.fp-title{font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:10px;}
+.fp-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.fp-chip{padding:5px 12px;border-radius:40px;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);border:0.5px solid rgba(0,0,0,0.1);background:rgba(0,0,0,0.04);color:var(--text2);transition:all 0.16s;}
+.fp-chip.on{color:#fff;border-color:transparent;}
+
+/* PLAYER OVERLAY */
+#player{
+  position:fixed;inset:0;z-index:1500;background:#000;
+  transform:translateY(100%);transition:transform 0.35s cubic-bezier(0.32,0.72,0,1);
+  display:flex;flex-direction:column;
+}
+#player.open{transform:translateY(0);}
+#player-top{padding:14px 16px;display:flex;align-items:center;gap:12px;flex-shrink:0;background:rgba(0,0,0,0.8);}
+#player-close{background:rgba(0,0,0,0.1);border:0.5px solid rgba(0,0,0,0.15);color:var(--text);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;}
+#player-screen{flex:1;position:relative;min-height:0;}
+#player-canvas{width:100%;height:100%;}
+#player-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 50%);}
+#player-big-btn{width:60px;height:60px;border-radius:50%;background:rgba(0,0,0,0.12);border:0.5px solid rgba(0,0,0,0.2);color:#fff;font-size:22px;cursor:pointer;backdrop-filter:blur(8px);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;}
+#progress-wrap{width:100%;height:3px;background:rgba(0,0,0,0.15);border-radius:2px;cursor:pointer;margin-bottom:5px;}
+#progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.1s;}
+#player-time{display:flex;justify-content:space-between;font-size:10px;color:rgba(0,0,0,0.4);}
+#player-info{padding:12px 16px;background:rgba(255,255,255,0.95);border-top:0.5px solid var(--border);flex-shrink:0;}
+#player-info-name{font-size:14px;font-weight:700;}
+#player-info-meta{font-size:11px;color:var(--text2);margin-top:2px;}
+
+/* YOU pin */
+.you-pin{display:flex;flex-direction:column;align-items:center;}
+.you-ring{width:20px;height:20px;border-radius:50%;border:3px solid #fbbf24;background:rgba(251,191,36,0.2);}
+.you-dot{width:8px;height:8px;border-radius:50%;background:#fbbf24;margin-top:-14px;margin-left:6px;box-shadow:0 0 8px #fbbf24;}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:4px;height:4px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.1);border-radius:2px;}
+
+@media(max-width:600px){
+  #detail{width:100%;border-left:none;border-top:0.5px solid var(--border2);top:auto;border-radius:22px 22px 0 0;}
+  #detail.open{transform:translateY(0);}
+  #detail:not(.open){transform:translateY(100%);}
+  #logo-text{display:none;}
+  #legend{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- MAP -->
+<div id="map"></div>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div id="logo">
+    <div id="logo-icon">🗺️</div>
+    <div id="logo-text">
+      <div id="logo-title">Incredible Karnataka</div>
+      <div id="logo-sub">Spatial Explorer v2.0</div>
+    </div>
+  </div>
+  <div id="search-wrap">
+    <input id="search" type="text" placeholder="Search places, districts, categories..."/>
+    <span id="search-icon">⌕</span>
+    <div id="search-results"></div>
+  </div>
+  <div id="place-count">55 places</div>
+  <button id="filter-btn" onclick="toggleFilter()">⚙ Filters</button>
+</div>
+
+<!-- KARNATAKA BORDER LEGEND -->
+<div id="border-legend">
+  <div class="border-line"></div>
+  Karnataka Border
+</div>
+
+<!-- LEGEND -->
+<div id="legend">
+  <div id="legend-title">Legend</div>
+  <div class="legend-row"><div class="leg-dot" style="background:#f97316"></div> Food &amp; Dining</div>
+  <div class="legend-row"><div class="leg-dot" style="background:#3b82f6"></div> Stay &amp; Rest</div>
+  <div class="legend-row"><div class="leg-dot" style="background:#fbbf24"></div> Shops</div>
+  <div class="legend-row"><div class="leg-dot" style="background:#10b981"></div> Hidden Gems</div>
+  <div class="legend-row"><div class="leg-dot" style="background:#fbbf24;box-shadow:0 0 6px #fbbf24"></div> Local Picks</div>
+</div>
+
+<!-- FILTER PANEL -->
+<div id="filter-panel">
+  <div class="fp-title">Categories</div>
+  <div class="fp-chips" id="fp-cats"></div>
+  <div class="fp-title">Districts</div>
+  <div class="fp-chips" id="fp-districts"></div>
+  <button onclick="resetFilters()" style="width:100%;padding:8px;border-radius:40px;border:0.5px solid rgba(249,115,22,0.4);background:rgba(249,115,22,0.1);color:var(--accent);font-family:var(--font);font-size:12px;font-weight:700;cursor:pointer;margin-top:4px;">Reset All</button>
+</div>
+
+<!-- FABs -->
+<div id="fabs">
+  <button class="fab" id="fab-location" onclick="goToLocation()" title="My location">📍</button>
+  <button class="fab" id="fab-feed" onclick="toggleSheet()" title="Browse places">📋</button>
+</div>
+
+<!-- BOTTOM SHEET -->
+<div id="sheet" class="peek">
+  <div id="sheet-handle-area" onclick="cycleSheet()">
+    <div id="sheet-handle"></div>
+    <div id="sheet-header">
+      <div id="sheet-title">🌿 Hidden Gems of Karnataka</div>
+      <div id="sheet-count-badge">0 shown</div>
+    </div>
+  </div>
+  <div id="cat-bar"></div>
+  <div id="feed"></div>
+</div>
+
+<!-- DETAIL PANEL -->
+<div id="detail">
+  <div id="detail-hero">
+    <canvas id="detail-canvas"></canvas>
+    <button id="detail-back" onclick="closeDetail()">←</button>
+  </div>
+  <div id="detail-body">
+    <div id="detail-name"></div>
+    <div id="detail-tags"></div>
+    <div id="detail-desc"></div>
+    <a id="detail-dir-btn" target="_blank" href="#">↗ Get Directions</a>
+    <div id="detail-info-grid"></div>
+    <div id="detail-vids-title">📹 Spatial Videos</div>
+    <div id="detail-vids"></div>
+  </div>
+</div>
+
+<!-- VIDEO PLAYER -->
+<div id="player">
+  <div id="player-top">
+    <button id="player-close" onclick="closePlayer()">←</button>
+    <div style="flex:1">
+      <div id="player-name" style="font-size:14px;font-weight:700;"></div>
+      <div id="player-sub" style="font-size:11px;color:var(--text2);"></div>
+    </div>
+    <div id="player-vidnum" style="font-size:11px;color:var(--text3);background:rgba(0,0,0,0.05);padding:4px 10px;border-radius:20px;border:0.5px solid var(--border);"></div>
+  </div>
+  <div id="player-screen">
+    <canvas id="player-canvas"></canvas>
+    <div id="player-overlay">
+      <button id="player-big-btn" onclick="togglePlay()">▶</button>
+      <div id="progress-wrap" onclick="scrub(event)"><div id="progress-fill" style="width:0%"></div></div>
+      <div id="player-time"><span id="pt-curr">0:00</span><span>0:24</span></div>
+    </div>
+  </div>
+  <div id="player-info">
+    <div id="player-info-name"></div>
+    <div id="player-info-meta"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script>
+// ═══════════════════════════════════════════════
+// DATA — 55 Hidden Gems, real GPS coordinates
+// ═══════════════════════════════════════════════
+const GEMS = [
+  {id:1,name:'Yana Rock Caves',district:'Uttara Kannada',cat:'Heritage',lat:14.610,lng:74.690,desc:'Massive 120m black crystalline limestone monoliths emerging from dense forest floor. Two giant spires — Bhairaveshwara Shikhara & Mohini Shikhara. 3km forest trek to reach.',best:'Oct–Feb',reach:'53km from Sirsi via Sonda road',emoji:'🪨',col1:'#7c3aed',col2:'#c4b5fd',rating:4.7,vids:4,type:'Hidden Gems'},
+  {id:2,name:'Shettihalli Ruins Church',district:'Hassan',cat:'Heritage',lat:13.215,lng:76.044,desc:'1860 Gothic church by French missionaries submerged in Hemavathi reservoir July–Oct. Hauntingly beautiful flooded aisles. One of India\'s most photogenic spots.',best:'Aug–Oct',reach:'14km from Hassan town',emoji:'⛪',col1:'#b45309',col2:'#fcd34d',rating:4.8,vids:5,type:'Hidden Gems'},
+  {id:3,name:'Honnemaradu Lake Camp',district:'Shivamogga',cat:'Offbeat',lat:14.165,lng:75.054,desc:'Tiny hamlet on Sharavathi backwaters — kayaking, island camping, bird watching. No phone signal. Surrounded by untouched Western Ghats forest.',best:'Oct–Mar',reach:'20km from Sagara',emoji:'🛶',col1:'#0369a1',col2:'#7dd3fc',rating:4.6,vids:3,type:'Hidden Gems'},
+  {id:4,name:'Netrani Island',district:'Uttara Kannada',cat:'Beach',lat:14.005,lng:74.329,desc:'Heart-shaped island — India\'s best scuba diving with 20m visibility. Coral reefs, reef sharks, rays. No permanent residents. Pristine and untouched.',best:'Oct–May',reach:'Speedboat from Murudeshwar (20 min)',emoji:'🏝️',col1:'#0284c7',col2:'#38bdf8',rating:4.9,vids:6,type:'Hidden Gems'},
+  {id:5,name:'Anegundi Village',district:'Koppal',cat:'Heritage',lat:15.354,lng:76.483,desc:'Older than Hampi — mythological Kishkindha (Monkey Kingdom) from Ramayana. Pampa Sarovar, cave paintings, Kamal Mahal, organic millet farms.',best:'Oct–Mar',reach:'Coracle from Hampi, 4km',emoji:'🏛️',col1:'#c2410c',col2:'#fb923c',rating:4.8,vids:5,type:'Heritage'},
+  {id:6,name:'Mullayanagiri Peak',district:'Chikkamagaluru',cat:'Trek',lat:13.492,lng:75.715,desc:'Karnataka\'s highest peak at 1930m. Dawn trek over coffee estates, misty valleys. Often above cloud level. 360° panoramic sunrise.',best:'Sep–Jan',reach:'25km from Chikkamagaluru town',emoji:'⛰️',col1:'#15803d',col2:'#86efac',rating:4.9,vids:7,type:'Hidden Gems'},
+  {id:7,name:'Agumbe Rainforest',district:'Shivamogga',cat:'Wildlife',lat:13.502,lng:75.096,desc:'Cherrapunji of the South — 7600mm rainfall. Last home of King Cobra, 8 unique frog species. Sunset view of Arabian Sea. RK Narayan\'s Malgudi Days inspiration.',best:'Jun–Nov',reach:'90km from Mangalore',emoji:'🐍',col1:'#16a34a',col2:'#4ade80',rating:4.7,vids:4,type:'Hidden Gems'},
+  {id:8,name:'Gokak Waterfalls',district:'Belagavi',cat:'Waterfall',lat:16.167,lng:74.833,desc:'Niagara of Karnataka — 52m wide horseshoe waterfall with 200m suspension bridge. Rarely visited. Ancient temples on both banks.',best:'Aug–Dec',reach:'60km from Belagavi',emoji:'🌊',col1:'#2563eb',col2:'#93c5fd',rating:4.5,vids:3,type:'Hidden Gems'},
+  {id:9,name:'Banavasi Ancient Town',district:'Uttara Kannada',cat:'Heritage',lat:14.534,lng:75.020,desc:'Karnataka\'s oldest town (325 AD), once Kadamba Empire capital. 9th-century Madhukeshwara temple with Shiva linga in a stunning moat setting.',best:'Oct–Mar',reach:'22km from Sirsi',emoji:'🏯',col1:'#a16207',col2:'#fbbf24',rating:4.7,vids:4,type:'Heritage'},
+  {id:10,name:'Kudremukh Peak',district:'Chikkamagaluru',cat:'Trek',lat:13.163,lng:75.229,desc:'Horse-face mountain at 1894m — 600+ endemic species. India\'s richest biodiversity. 23km trek through shola forests and freshwater springs.',best:'Sep–Jan',reach:'95km from Mangalore',emoji:'🌿',col1:'#065f46',col2:'#6ee7b7',rating:4.8,vids:5,type:'Hidden Gems'},
+  {id:11,name:'St. Mary\'s Island',district:'Udupi',cat:'Beach',lat:13.362,lng:74.654,desc:'88-million-year-old hexagonal basalt columns. Geological Monument of India. Vasco da Gama first landed here 1498. Crystal clear waters.',best:'Oct–May',reach:'Ferry from Malpe Beach (10 min)',emoji:'🌋',col1:'#0e7490',col2:'#22d3ee',rating:4.8,vids:5,type:'Hidden Gems'},
+  {id:12,name:'Bheemeshwari Fishing Camp',district:'Mandya',cat:'Wildlife',lat:12.451,lng:77.069,desc:'Mahseer fishing on Cauvery inside wildlife sanctuary. Night treks for leopards, crocodiles, 200+ bird species. Coracle rides at dawn.',best:'Oct–Feb',reach:'100km from Bangalore',emoji:'🎣',col1:'#7c2d12',col2:'#fdba74',rating:4.6,vids:3,type:'Wildlife'},
+  {id:13,name:'Daroji Sloth Bear Sanctuary',district:'Vijayanagara',cat:'Wildlife',lat:15.120,lng:76.578,desc:'India\'s first dedicated sloth bear sanctuary. 120+ bears in rocky habitat. Viewing platform at sunset when bears emerge for honey.',best:'Oct–Apr',reach:'15km from Hampi',emoji:'🐻',col1:'#78350f',col2:'#d97706',rating:4.7,vids:4,type:'Wildlife'},
+  {id:14,name:'Ramanagara Boulders',district:'Ramanagara',cat:'Trek',lat:12.715,lng:77.282,desc:'Sholay filming location — massive granite boulders 50km from Bangalore. Rock climbing mecca with 40+ routes. Eagle owl nesting site.',best:'Oct–Feb',reach:'50km from Bangalore on Mysuru Road',emoji:'🧗',col1:'#92400e',col2:'#fcd34d',rating:4.5,vids:3,type:'Hidden Gems'},
+  {id:15,name:'Bidar Fort & Bahamani Tombs',district:'Bidar',cat:'Heritage',lat:17.914,lng:77.531,desc:'Massive Mughal-era fort and 12 Bahamani tombs at Ashtur. India\'s most underrated Islamic heritage. Persian tilework, completely deserted at dawn.',best:'Oct–Mar',reach:'Bidar city, 130km from Hyderabad',emoji:'🕌',col1:'#5b21b6',col2:'#a78bfa',rating:4.8,vids:5,type:'Heritage'},
+  {id:16,name:'Kabini Black Panther Zone',district:'Mysuru',cat:'Wildlife',lat:11.930,lng:76.414,desc:'Only place in world where melanistic black leopard is regularly sighted. Nagarhole NP with elephant, gaur, 300+ birds. Coracle river crossing.',best:'Oct–May',reach:'80km from Mysuru via Hunsur',emoji:'🐆',col1:'#1c1917',col2:'#78716c',rating:4.9,vids:7,type:'Wildlife'},
+  {id:17,name:'Mandalpatti Viewpoint',district:'Kodagu',cat:'Trek',lat:12.316,lng:75.752,desc:'1650m secret viewpoint requiring 4WD through coffee estates. Unobstructed 360° Coorg panorama. Only accessible dry season.',best:'Oct–May',reach:'18km from Madikeri',emoji:'🌄',col1:'#14532d',col2:'#4ade80',rating:4.8,vids:4,type:'Hidden Gems'},
+  {id:18,name:'Maravanthe Twin-Sea Beach',district:'Udupi',cat:'Beach',lat:13.796,lng:74.607,desc:'Only road in India flanked by sea both sides — Arabian Sea left, Souparnika River right. Golden sand, no commercialisation, stunning sunsets.',best:'Oct–Feb',reach:'56km from Mangalore on NH66',emoji:'🌅',col1:'#0c4a6e',col2:'#38bdf8',rating:4.8,vids:5,type:'Hidden Gems'},
+  {id:19,name:'Belur Halebidu Temples',district:'Hassan',cat:'Heritage',lat:13.162,lng:75.861,desc:'12th-century Hoysala masterpieces — 20,000 sculptures, zero repetition. More detailed than Khajuraho. Astronomical precision. Shockingly uncrowded.',best:'Oct–Mar',reach:'220km from Bangalore',emoji:'🗿',col1:'#9f1239',col2:'#fda4af',rating:4.9,vids:6,type:'Heritage'},
+  {id:20,name:'Badami Cave Temples',district:'Bagalkot',cat:'Heritage',lat:15.916,lng:75.679,desc:'6th-century Chalukya caves carved into red sandstone above Agastya Lake. Four caves — Buddhist, Jain & Hindu side by side. Perfect golden hour.',best:'Oct–Feb',reach:'130km from Hubli',emoji:'🏔️',col1:'#c2410c',col2:'#fb923c',rating:4.8,vids:5,type:'Heritage'},
+  {id:21,name:'Sakleshpur Coffee Trek',district:'Hassan',cat:'Trek',lat:12.942,lng:75.784,desc:'British railway track trek through 53 tunnels, 57 bridges in coffee country. 18km with waterfalls every km. Magical misty morning.',best:'Sep–Jan',reach:'220km from Bangalore',emoji:'🚂',col1:'#713f12',col2:'#d97706',rating:4.7,vids:5,type:'Trek'},
+  {id:22,name:'Kemmanagundi Hill Station',district:'Chikkamagaluru',cat:'Offbeat',lat:13.540,lng:75.742,desc:'Former summer palace of Krishnaraja Wadiyar at 1434m. Rose garden, Hebbe Falls trek, Z-point sunset. Completely uncrowded.',best:'Sep–Feb',reach:'60km from Chikkamagaluru',emoji:'🌹',col1:'#047857',col2:'#34d399',rating:4.6,vids:3,type:'Hidden Gems'},
+  {id:23,name:'Bandaje Falls',district:'Dakshina Kannada',cat:'Waterfall',lat:12.988,lng:75.462,desc:'200-foot cascade deep inside Belthangady rainforest. 7km trek through coffee estates. Completely dry summer — visit post-monsoon.',best:'Sep–Jan',reach:'35km from Mangalore',emoji:'💦',col1:'#0891b2',col2:'#67e8f9',rating:4.7,vids:4,type:'Hidden Gems'},
+  {id:24,name:'Hampi Anjanadri Hill',district:'Vijayanagara',cat:'Spiritual',lat:15.387,lng:76.430,desc:'Birthplace of Hanuman — 575 steep steps to hilltop temple. Golden sunset over Hampi ruins and Tungabhadra. Unseen by most tourists.',best:'Oct–Mar',reach:'Coracle from Hampi + 2km walk',emoji:'🙏',col1:'#b45309',col2:'#fcd34d',rating:4.8,vids:4,type:'Spiritual'},
+  {id:25,name:'Tadiyendamol Peak',district:'Kodagu',cat:'Trek',lat:12.005,lng:75.724,desc:'Coorg\'s highest peak 1748m. 7km trail through coffee, shola forests, rolling grasslands. Views over Tamil Nadu and Kerala peaks.',best:'Sep–Jan',reach:'35km from Virajpet via Kakkabe',emoji:'🏔️',col1:'#064e3b',col2:'#34d399',rating:4.8,vids:4,type:'Trek'},
+  {id:26,name:'Jog Falls Viewpoint Trek',district:'Shivamogga',cat:'Waterfall',lat:14.227,lng:74.802,desc:'India\'s highest plunge waterfall at 253m — the lesser-known bottom trek adds 600 steps down to the pool. Monsoon roar is deafening.',best:'Aug–Jan',reach:'100km from Shimoga town',emoji:'🌊',col1:'#1d4ed8',col2:'#93c5fd',rating:4.8,vids:6,type:'Waterfall'},
+  {id:27,name:'Gulbarga Jami Masjid',district:'Kalaburagi',cat:'Heritage',lat:17.330,lng:76.818,desc:'India\'s largest single-domed mosque (1367 AD), modelled on Cordoba mosque. Inside massive Bahamani fort. Almost entirely unvisited.',best:'Oct–Mar',reach:'215km from Hyderabad',emoji:'🕌',col1:'#6d28d9',col2:'#c4b5fd',rating:4.6,vids:3,type:'Heritage'},
+  {id:28,name:'Kaigal Twin Falls',district:'Chikkaballapur',cat:'Waterfall',lat:13.226,lng:77.998,desc:'40m twin cascades near Andhra border. Red rocky terrain unlike typical Karnataka landscapes. Rare medicinal plant trail. Flash floods possible.',best:'Nov–Mar',reach:'120km from Bangalore',emoji:'💧',col1:'#b91c1c',col2:'#fca5a5',rating:4.4,vids:2,type:'Waterfall'},
+  {id:29,name:'Devarayanadurga Hills',district:'Tumakuru',cat:'Spiritual',lat:13.369,lng:77.171,desc:'1508m granite hill temple complex 70km from Bangalore. Twin peaks, boulder fields, medicinal springs. Panoramic sunrise above clouds.',best:'Oct–Mar',reach:'70km from Bangalore via NH4',emoji:'🌄',col1:'#92400e',col2:'#fbbf24',rating:4.5,vids:3,type:'Spiritual'},
+  {id:30,name:'Nishani Motte Meadows',district:'Kodagu',cat:'Trek',lat:12.050,lng:75.833,desc:'Secret 1644m meadow inside Brahmagiri Wildlife Sanctuary. 8km trail through shola forest. Sweeping Nilgiri and Western Ghats views.',best:'Oct–Mar',reach:'100km from Madikeri via Virajpet',emoji:'🌾',col1:'#4d7c0f',col2:'#a3e635',rating:4.7,vids:3,type:'Trek'},
+  {id:31,name:'Apsarakonda Waterfall Beach',district:'Uttara Kannada',cat:'Beach',lat:14.322,lng:74.454,desc:'Secluded beach where waterfall drops into sea. Barely 500 visitors/year. Village has no electricity — pack everything in.',best:'Oct–Feb',reach:'12km from Bhatkal via forest road',emoji:'🏖️',col1:'#0369a1',col2:'#7dd3fc',rating:4.9,vids:4,type:'Hidden Gems'},
+  {id:32,name:'Bhoga Nandeeshwara Temple',district:'Bengaluru Rural',cat:'Spiritual',lat:13.345,lng:77.693,desc:'1500-year-old temple at foot of Nandi Hills — three shrines across Hoysala, Vijayanagara and Mysore eras. Ancient sacred tank. Pre-dates most Karnataka temples.',best:'Oct–Mar',reach:'60km from Bangalore',emoji:'🛕',col1:'#d97706',col2:'#fde68a',rating:4.7,vids:3,type:'Spiritual'},
+  {id:33,name:'Hirekolale Lake',district:'Chikkamagaluru',cat:'Offbeat',lat:13.320,lng:75.774,desc:'450-acre lake with submerged temple spires at water\'s edge. Flamingos, pelicans, painted storks. Coracle rides. Morning mist creates magical atmosphere.',best:'Oct–Feb',reach:'3km from Chikkamagaluru town',emoji:'🦢',col1:'#1e40af',col2:'#93c5fd',rating:4.6,vids:3,type:'Hidden Gems'},
+  {id:34,name:'Aihole Rock Temples',district:'Bagalkot',cat:'Heritage',lat:15.999,lng:75.876,desc:'Cradle of Indian temple architecture — 125 temples from 4th–12th century. Chalukya experiments in stone before Pattadakal and Badami. Almost empty of visitors.',best:'Oct–Mar',reach:'140km from Hubli',emoji:'⛩️',col1:'#92400e',col2:'#fb923c',rating:4.7,vids:4,type:'Heritage'},
+  {id:35,name:'Kodachadri Peak',district:'Shivamogga',cat:'Trek',lat:13.887,lng:74.937,desc:'1343m sacred peak above Arabian Sea horizon. 12km trek through Mookambika Wildlife Sanctuary. Goddess Mookambika temple at summit.',best:'Oct–Mar',reach:'65km from Shimoga',emoji:'⛰️',col1:'#15803d',col2:'#4ade80',rating:4.7,vids:5,type:'Trek'},
+  {id:36,name:'Tungabhadra Dam Backwaters',district:'Vijayanagara',cat:'Offbeat',lat:15.269,lng:76.340,desc:'Vast blue reservoir at sunset with Hampi ruins silhouetted. Coracle rides, cliff jumping, camping on sandy banks. Secret local spot.',best:'Oct–Mar',reach:'5km from Hosapete town',emoji:'🌊',col1:'#0369a1',col2:'#38bdf8',rating:4.5,vids:3,type:'Offbeat'},
+  {id:37,name:'Chikmagalur Coffee Estates',district:'Chikkamagaluru',cat:'Offbeat',lat:13.318,lng:75.776,desc:'India\'s first coffee-growing region since 1670. Walk through misty Arabica and Robusta plantations. Homestay with estate breakfast and plantation tours.',best:'Oct–Feb',reach:'250km from Bangalore',emoji:'☕',col1:'#713f12',col2:'#d97706',rating:4.6,vids:4,type:'Food & Dining'},
+  {id:38,name:'Murudeshwar Beach & Shiva',district:'Uttara Kannada',cat:'Spiritual',lat:14.094,lng:74.486,desc:'Second tallest Shiva statue in world (123m) on Arabian Sea cliff. Underwater Shiva temple visible at low tide. Shimmering at sunset.',best:'Oct–Mar',reach:'165km from Mangalore',emoji:'🕉️',col1:'#7c3aed',col2:'#c4b5fd',rating:4.7,vids:5,type:'Spiritual'},
+  {id:39,name:'Pattadakal World Heritage',district:'Bagalkot',cat:'Heritage',lat:15.948,lng:75.819,desc:'UNESCO World Heritage — 8th-century Chalukya capital with 10 major temples mixing North and South Indian styles. Peaceful and undervisited.',best:'Oct–Mar',reach:'29km from Badami',emoji:'🏛️',col1:'#c2410c',col2:'#fdba74',rating:4.8,vids:5,type:'Heritage'},
+  {id:40,name:'Kaveri River Rafting',district:'Kodagu',cat:'Trek',lat:12.424,lng:75.934,desc:'Grade 3 rapids through Coorg jungle. 8km stretch with 12 named rapids. Jungle wildlife on banks — otters, kingfishers, river terns.',best:'Jul–Feb',reach:'35km from Madikeri near Dubare',emoji:'🚣',col1:'#0369a1',col2:'#38bdf8',rating:4.7,vids:4,type:'Trek'},
+  {id:41,name:'Skandagiri Night Trek',district:'Chikkaballapur',cat:'Trek',lat:13.607,lng:77.688,desc:'Pre-dawn trek to 1450m ruins above the clouds. Ancient fort ruins at summit. Arrive 2am to see sea of clouds at sunrise. Misty and otherworldly.',best:'Oct–Mar',reach:'65km from Bangalore',emoji:'🌙',col1:'#312e81',col2:'#a5b4fc',rating:4.8,vids:5,type:'Trek'},
+  {id:42,name:'Ranganathittu Bird Sanctuary',district:'Mysuru',cat:'Wildlife',lat:12.421,lng:76.678,desc:'Breeding colony of painted storks, open-bill storks, cormorants, egrets on Cauvery islets. Boat safari through nesting trees. Best in Jun–Nov.',best:'Jun–Nov',reach:'16km from Mysuru',emoji:'🦜',col1:'#15803d',col2:'#86efac',rating:4.7,vids:4,type:'Wildlife'},
+  {id:43,name:'Nandi Hills Sunrise',district:'Chikkaballapur',cat:'Offbeat',lat:13.364,lng:77.683,desc:'Ancient hill fortress at 1478m — Tipu Sultan\'s summer retreat. Sea of clouds at sunrise. Paragliding launch pad. 1800-year-old Yoga Nandeeshwara temple.',best:'Oct–Mar',reach:'60km from Bangalore',emoji:'☀️',col1:'#d97706',col2:'#fde68a',rating:4.6,vids:4,type:'Offbeat'},
+  {id:44,name:'Coorg Namdroling Monastery',district:'Kodagu',cat:'Spiritual',lat:11.997,lng:75.874,desc:'Golden Temple of South India — largest Nyingma Buddhist monastery outside Tibet. 20m golden Buddha, stunning frescoes. Serene forested campus.',best:'Oct–Mar',reach:'35km from Madikeri via Kushalnagar',emoji:'🏯',col1:'#b45309',col2:'#fbbf24',rating:4.8,vids:4,type:'Spiritual'},
+  {id:45,name:'Magod Falls',district:'Uttara Kannada',cat:'Waterfall',lat:14.819,lng:74.741,desc:'Twin waterfalls in thick forest — upper (80m) and lower (90m) cascades surrounded by untouched Sahyadri woodland. Zero infrastructure.',best:'Aug–Jan',reach:'30km from Yellapur',emoji:'💦',col1:'#0284c7',col2:'#7dd3fc',rating:4.6,vids:3,type:'Waterfall'},
+  {id:46,name:'Chitradurga Fort',district:'Chitradurga',cat:'Heritage',lat:14.233,lng:76.400,desc:'Rock fortress of the Nayakas — 19 concentric walls, 4 secret entrances, 38 gates and 28 temples across 7km² of rock maze. Built 1300–1779 AD.',best:'Oct–Mar',reach:'200km from Bangalore on NH4',emoji:'🏰',col1:'#7c2d12',col2:'#fb923c',rating:4.7,vids:4,type:'Heritage'},
+  {id:47,name:'Kali Tiger Reserve Safari',district:'Uttara Kannada',cat:'Wildlife',lat:15.032,lng:74.568,desc:'Karnataka\'s densest tiger reserve — also home to leopards, dholes, gaurs. Night safaris available. Kali river flows through tiger habitat.',best:'Oct–May',reach:'90km from Dharwad via Yellapur',emoji:'🐯',col1:'#92400e',col2:'#f97316',rating:4.8,vids:6,type:'Wildlife'},
+  {id:48,name:'Ullal Beach Dargah',district:'Dakshina Kannada',cat:'Spiritual',lat:12.811,lng:74.859,desc:'Beautiful windswept beach beside the 800-year-old Sayyed Mohammed Shareef Dargah. Sufi music on Thursday evenings. Rainbow cliffs at sunset.',best:'Oct–Mar',reach:'12km from Mangalore city',emoji:'🌊',col1:'#0c4a6e',col2:'#38bdf8',rating:4.6,vids:3,type:'Spiritual'},
+  {id:49,name:'Brahmagiri Wildlife Sanctuary',district:'Kodagu',cat:'Wildlife',lat:11.962,lng:75.810,desc:'Misty peak on tri-junction of Karnataka, Kerala, Tamil Nadu. Nilgiri tahr sightings. Shola forests with lion-tailed macaque. Annual Igguthappa festival.',best:'Oct–Mar',reach:'100km from Madikeri',emoji:'🦁',col1:'#064e3b',col2:'#6ee7b7',rating:4.7,vids:4,type:'Wildlife'},
+  {id:50,name:'Ghati Subramanya Temple',district:'Bengaluru Rural',cat:'Spiritual',lat:13.490,lng:77.401,desc:'Temple known for curing snake bites — thousands arrive every Tuesday. Built around ancient ant-hill believed to be living serpent deity. Unique in India.',best:'Oct–Mar',reach:'50km from Bangalore via Dobbspet',emoji:'🐍',col1:'#15803d',col2:'#4ade80',rating:4.6,vids:3,type:'Spiritual'},
+  {id:51,name:'Biligirirangaswamy Hills',district:'Chamarajanagara',cat:'Wildlife',lat:11.978,lng:77.172,desc:'Only place in India where Western Ghats meet Eastern Ghats. Elephant corridor. Soliga tribal culture. Cloud-touching 1800m plateau.',best:'Oct–Mar',reach:'180km from Bangalore via Mysuru',emoji:'🐘',col1:'#4d7c0f',col2:'#86efac',rating:4.7,vids:4,type:'Wildlife'},
+  {id:52,name:'Kupwad & Kokatnur Lakes',district:'Vijayapura',cat:'Offbeat',lat:16.832,lng:75.720,desc:'North Karnataka\'s surprise flamingo lake — thousands of greater and lesser flamingos. Ancient Bijapur irrigation canals feed these lakes.',best:'Nov–Feb',reach:'40km from Bijapur city',emoji:'🦩',col1:'#db2777',col2:'#f9a8d4',rating:4.5,vids:2,type:'Offbeat'},
+  {id:53,name:'Kotilingeshwara Temple',district:'Kolar',cat:'Spiritual',lat:13.017,lng:78.209,desc:'One crore Shiva lingas — largest collection on earth. Still growing: one new linga installed daily. 108ft Shiva statue. Extraordinary scale.',best:'Year round',reach:'140km from Bangalore via Kolar',emoji:'🕉️',col1:'#d97706',col2:'#fbbf24',rating:4.6,vids:3,type:'Spiritual'},
+  {id:54,name:'Deccan Plateau Rock Art',district:'Raichur',cat:'Heritage',lat:16.200,lng:77.360,desc:'5000-year-old Neolithic rock paintings at Kupgal (Hirebenakal). Cupules and images of cattle, hunters. One of the oldest human art sites in South India.',best:'Oct–Mar',reach:'40km from Raichur',emoji:'🎨',col1:'#7c2d12',col2:'#f97316',rating:4.6,vids:3,type:'Heritage'},
+  {id:55,name:'Yadgir Shorapur Fort',district:'Yadgir',cat:'Heritage',lat:16.755,lng:77.063,desc:'Fort of the legendary Nayak kings on a dramatic hill. Largely unknown. Panoramic views of Krishna river bend. 17th century basalt construction.',best:'Oct–Mar',reach:'65km from Kalaburagi',emoji:'🏯',col1:'#6d28d9',col2:'#a78bfa',rating:4.4,vids:2,type:'Heritage'},
+];
+
+const CAT_COLORS = {
+  'Trek':{'c':'#10b981','b':'rgba(16,185,129,0.15)'},
+  'Heritage':{'c':'#f97316','b':'rgba(249,115,22,0.15)'},
+  'Wildlife':{'c':'#22c55e','b':'rgba(34,197,94,0.15)'},
+  'Beach':{'c':'#3b82f6','b':'rgba(59,130,246,0.15)'},
+  'Waterfall':{'c':'#06b6d4','b':'rgba(6,182,212,0.15)'},
+  'Offbeat':{'c':'#fbbf24','b':'rgba(251,191,36,0.15)'},
+  'Spiritual':{'c':'#a78bfa','b':'rgba(167,139,250,0.15)'},
+  'Food & Dining':{'c':'#f97316','b':'rgba(249,115,22,0.15)'},
+  'Waterfall':{'c':'#38bdf8','b':'rgba(56,189,248,0.15)'},
+};
+
+const TYPE_COLORS = {'Food & Dining':'#f97316','Stay & Rest':'#3b82f6','Shops':'#fbbf24','Hidden Gems':'#10b981','Local Picks':'#fbbf24','Heritage':'#f97316','Wildlife':'#22c55e','Trek':'#10b981','Beach':'#3b82f6','Waterfall':'#06b6d4','Offbeat':'#fbbf24','Spiritual':'#a78bfa'};
+
+// ═══════════════════════════════════════════
+// MAP INIT
+// ═══════════════════════════════════════════
+const map = L.map('map', {
+  center: [14.5, 75.7],
+  zoom: 7,
+  zoomControl: false,
+  preferCanvas: true,
+});
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '© OpenStreetMap © CARTO',
+  subdomains: 'abcd', maxZoom: 19,
+}).addTo(map);
+
+L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+// Karnataka highly accurate boundary GeoJSON
+fetch('https://raw.githubusercontent.com/inosaint/StatesOfIndia/master/karnataka.geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: '#f97316',
+        weight: 2,
+        dashArray: '6,3',
+        fillColor: 'rgba(74,222,128,0.03)',
+        fillOpacity: 1,
+        opacity: 0.85
+      }
+    }).addTo(map);
+  })
+  .catch(err => console.error("Could not load karnataka boundary:", err));
+
+// User location (Bidar)
+const youIcon = L.divIcon({
+  html:`<div class="you-pin"><div style="width:20px;height:20px;border-radius:50%;border:3px solid #fbbf24;background:rgba(251,191,36,0.25);box-shadow:0 0 16px rgba(251,191,36,0.6);"></div><div style="width:8px;height:8px;border-radius:50%;background:#fbbf24;margin:-5px auto 0;box-shadow:0 0 8px #fbbf24;"></div></div>`,
+  iconSize:[20,28],iconAnchor:[10,28],className:'',
+});
+L.marker([17.924,77.515],{icon:youIcon}).addTo(map)
+  .bindTooltip('<strong style="font-family:Outfit">📍 You are here — Bidar</strong>',{permanent:false,direction:'top',className:'leaflet-tooltip'});
+
+// ═══════════════════════════════════════════
+// MARKERS & CLUSTERS
+// ═══════════════════════════════════════════
+const clusterGroup = L.markerClusterGroup({
+  maxClusterRadius:60,
+  spiderfyOnMaxZoom:true,
+  showCoverageOnHover:false,
+  zoomToBoundsOnClick:true,
+  iconCreateFunction(cluster){
+    const count = cluster.getChildCount();
+    const sz = count<5?38:count<10?44:50;
+    return L.divIcon({
+      html:`<div style="width:${sz}px;height:${sz}px;border-radius:50%;background:rgba(249,115,22,0.9);display:flex;align-items:center;justify-content:center;font-family:Outfit;font-weight:800;font-size:${sz>40?15:13}px;color:#fff;box-shadow:0 0 0 4px rgba(249,115,22,0.25),0 4px 16px rgba(0,0,0,0.5);border:2px solid rgba(0,0,0,0.15);">${count}</div>`,
+      iconSize:[sz,sz],iconAnchor:[sz/2,sz/2],className:'',
+    });
+  }
+});
+
+const markerMap = {};
+
+function makePin(gem){
+  const col = TYPE_COLORS[gem.type]||TYPE_COLORS[gem.cat]||'#10b981';
+  const html=`<div class="gem-pin">
+    <div class="pin-bubble" style="background:rgba(255,255,255,0.92);border-color:${col}50;color:${col};">
+      <span style="font-size:12px">${gem.emoji}</span>
+      <span style="font-size:10px;font-weight:800;max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${gem.name}</span>
+    </div>
+    <div class="pin-tail" style="background:${col};"></div>
+  </div>`;
+  const icon=L.divIcon({html,iconSize:[110,40],iconAnchor:[55,40],className:''});
+  const m=L.marker([gem.lat,gem.lng],{icon});
+  m.on('click',()=>openDetail(gem));
+  markerMap[gem.id]=m;
+  return m;
+}
+
+let allMarkers = [];
+function renderMarkers(gems){
+  clusterGroup.clearLayers();
+  allMarkers=gems.map(g=>{const m=makePin(g);clusterGroup.addLayer(m);return m;});
+  updateBadges(gems.length);
+}
+renderMarkers(GEMS);
+map.addLayer(clusterGroup);
+
+function updateBadges(n){
+  document.getElementById('place-count').textContent=n+' places';
+  document.getElementById('sheet-count-badge').textContent=n+' shown';
+}
+
+// ═══════════════════════════════════════════
+// FILTERS
+// ═══════════════════════════════════════════
+const CATS=['All','Trek','Heritage','Wildlife','Beach','Waterfall','Offbeat','Spiritual','Food & Dining'];
+const DISTRICTS=['All',...new Set(GEMS.map(g=>g.district))].sort((a,b)=>a==='All'?-1:b==='All'?1:a.localeCompare(b));
+
+let activeCat='All', activeDistrict='All';
+
+// Bottom sheet cat bar
+const catBar=document.getElementById('cat-bar');
+CATS.forEach(c=>{
+  const el=document.createElement('button');
+  el.className='cat-chip'+(c==='All'?' on':'');
+  el.textContent=c;
+  el.onclick=()=>setCat(c);
+  catBar.appendChild(el);
+});
+
+// Filter panel
+const fpCats=document.getElementById('fp-cats');
+CATS.filter(c=>c!=='All').forEach(c=>{
+  const el=document.createElement('button');
+  el.className='fp-chip';
+  const col=TYPE_COLORS[c]||'#10b981';
+  el.textContent=c;
+  el.style.background=activeCat===c?col:'rgba(0,0,0,0.04)';
+  el.onclick=()=>{setCat(c);};
+  fpCats.appendChild(el);
+});
+const fpDistricts=document.getElementById('fp-districts');
+DISTRICTS.forEach(d=>{
+  const el=document.createElement('button');
+  el.className='fp-chip';
+  el.textContent=d;
+  el.onclick=()=>setDistrict(d);
+  fpDistricts.appendChild(el);
+});
+
+function setCat(c){
+  activeCat=c;
+  document.querySelectorAll('.cat-chip').forEach((el,i)=>{el.classList.toggle('on',CATS[i]===c);});
+  applyFilters();
+}
+function setDistrict(d){
+  activeDistrict=d;
+  document.querySelectorAll('.fp-chip').forEach(el=>{
+    if(DISTRICTS.includes(el.textContent)) el.style.background=el.textContent===d?'#10b981':'rgba(0,0,0,0.04)';
+  });
+  applyFilters();
+}
+function resetFilters(){
+  activeCat='All'; activeDistrict='All';
+  document.querySelectorAll('.cat-chip').forEach((el,i)=>el.classList.toggle('on',CATS[i]==='All'));
+  document.querySelectorAll('.fp-chip').forEach(el=>{el.style.background='rgba(0,0,0,0.04)';});
+  applyFilters();
+}
+function applyFilters(){
+  const q=document.getElementById('search').value.toLowerCase().trim();
+  const filtered=GEMS.filter(g=>{
+    const catOk=activeCat==='All'||(g.cat===activeCat||g.type===activeCat);
+    const distOk=activeDistrict==='All'||g.district===activeDistrict;
+    const qOk=!q||g.name.toLowerCase().includes(q)||g.district.toLowerCase().includes(q)||g.cat.toLowerCase().includes(q)||g.desc.toLowerCase().includes(q);
+    return catOk&&distOk&&qOk;
+  });
+  renderMarkers(filtered);
+  renderFeed(filtered);
+}
+
+// ═══════════════════════════════════════════
+// SEARCH
+// ═══════════════════════════════════════════
+const searchEl=document.getElementById('search');
+const srEl=document.getElementById('search-results');
+searchEl.addEventListener('input',()=>{
+  const q=searchEl.value.toLowerCase().trim();
+  applyFilters();
+  if(!q){srEl.style.display='none';return;}
+  const hits=GEMS.filter(g=>g.name.toLowerCase().includes(q)||g.district.toLowerCase().includes(q)||g.cat.toLowerCase().includes(q)).slice(0,6);
+  if(!hits.length){srEl.style.display='none';return;}
+  srEl.innerHTML=hits.map(g=>`
+    <div class="sr-item" data-id="${g.id}">
+      <span class="sr-emoji">${g.emoji}</span>
+      <div class="sr-info">
+        <div class="sr-name">${g.name}</div>
+        <div class="sr-meta">${g.district} · ${g.cat} · ★${g.rating}</div>
+      </div>
+    </div>`).join('');
+  srEl.style.display='block';
+  srEl.querySelectorAll('.sr-item').forEach(el=>{
+    el.onclick=()=>{
+      const gem=GEMS.find(g=>g.id==el.dataset.id);
+      if(gem){map.setView([gem.lat,gem.lng],13);openDetail(gem);}
+      srEl.style.display='none';searchEl.value=gem?.name||'';
+    };
+  });
+});
+document.addEventListener('click',e=>{if(!e.target.closest('#search-wrap'))srEl.style.display='none';});
+
+// ═══════════════════════════════════════════
+// BOTTOM SHEET
+// ═══════════════════════════════════════════
+let sheetState='peek';
+const sheet=document.getElementById('sheet');
+function cycleSheet(){const m={peek:'half',half:'full',full:'peek'};setSheet(m[sheetState]);}
+function setSheet(s){sheetState=s;sheet.className=s;}
+function toggleSheet(){setSheet(sheetState==='peek'?'half':'peek');}
+
+function renderFeed(gems){
+  const sorted=[...gems].sort((a,b)=>{
+    const ua=17.924,ub=77.515;
+    const da=Math.sqrt((a.lat-ua)**2+(a.lng-ub)**2);
+    const db=Math.sqrt((b.lat-ua)**2+(b.lng-ub)**2);
+    return da-db;
+  });
+  const feed=document.getElementById('feed');
+  feed.innerHTML=sorted.map(g=>{
+    const col=TYPE_COLORS[g.type]||TYPE_COLORS[g.cat]||'#10b981';
+    const dist=(Math.sqrt((g.lat-17.924)**2+(g.lng-77.515)**2)*111).toFixed(0);
+    return `<div class="gem-card" data-id="${g.id}" onclick="flyTo(${g.id})">
+      <div class="card-thumb" style="background:linear-gradient(135deg,${g.col1}22,${g.col2}15);border:0.5px solid ${g.col1}30;">
+        <span style="font-size:28px">${g.emoji}</span>
+        <div class="card-play" onclick="event.stopPropagation();openPlayer(${g.id})">
+          <div style="width:26px;height:26px;border-radius:50%;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)">
+            <svg width="8" height="10" viewBox="0 0 8 10"><path d="M1 1l6 4-6 4V1z" fill="white"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-name">${g.name}</div>
+        <div class="card-district">${g.district} · ${dist} km</div>
+        <div class="card-desc">${g.desc}</div>
+        <div class="card-meta">
+          <span class="card-cat-tag" style="background:${col}18;color:${col};border:0.5px solid ${col}30">${g.cat}</span>
+          <span class="card-rating">★ ${g.rating}</span>
+          <span class="card-dist">${g.vids} vids</span>
+          <a class="card-dir-btn" href="https://www.google.com/maps/dir/?api=1&destination=${g.lat},${g.lng}" target="_blank" onclick="event.stopPropagation()">Route ↗</a>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+renderFeed(GEMS);
+
+function flyTo(id){
+  const g=GEMS.find(x=>x.id===id);
+  if(!g)return;
+  map.flyTo([g.lat,g.lng],13,{duration:1.2});
+  openDetail(g);
+}
+
+// ═══════════════════════════════════════════
+// DETAIL PANEL
+// ═══════════════════════════════════════════
+let currentGem=null;
+function openDetail(gem){
+  currentGem=gem;
+  const col=TYPE_COLORS[gem.type]||TYPE_COLORS[gem.cat]||'#10b981';
+  const dist=(Math.sqrt((gem.lat-17.924)**2+(gem.lng-77.515)**2)*111).toFixed(0);
+
+  // Hero canvas
+  const canvas=document.getElementById('detail-canvas');
+  canvas.width=canvas.offsetWidth||380;canvas.height=220;
+  const ctx=canvas.getContext('2d');
+  ctx.fillStyle='#f8fafc';ctx.fillRect(0,0,canvas.width,220);
+  const g=ctx.createLinearGradient(0,0,canvas.width,220);
+  g.addColorStop(0,gem.col1+'33');g.addColorStop(1,gem.col2+'18');
+  ctx.fillStyle=g;ctx.fillRect(0,0,canvas.width,220);
+  // Dot pattern
+  ctx.fillStyle=gem.col1+'12';
+  for(let x=0;x<canvas.width;x+=20)for(let y=0;y<220;y+=20){ctx.beginPath();ctx.arc(x,y,1.5,0,Math.PI*2);ctx.fill();}
+  // Emoji
+  ctx.font='90px system-ui';ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.shadowColor=gem.col1;ctx.shadowBlur=30;
+  ctx.fillText(gem.emoji,canvas.width/2,105);
+
+  document.getElementById('detail-name').textContent=gem.name;
+  const tags=document.getElementById('detail-tags');
+  const tagItems=[
+    {text:gem.cat,bg:col+'18',color:col,border:col+'30'},
+    {text:gem.district,bg:'rgba(0,0,0,0.05)',color:'#9a9a8a',border:'rgba(0,0,0,0.1)'},
+    {text:'★ '+gem.rating,bg:'rgba(251,191,36,0.1)',color:'#fbbf24',border:'rgba(251,191,36,0.25)'},
+    {text:dist+' km',bg:'rgba(16,185,129,0.08)',color:'#10b981',border:'rgba(16,185,129,0.2)'},
+  ];
+  tags.innerHTML=tagItems.map(t=>`<span class="dtag" style="background:${t.bg};color:${t.color};border:0.5px solid ${t.border}">${t.text}</span>`).join('');
+  document.getElementById('detail-desc').textContent=gem.desc;
+  document.getElementById('detail-dir-btn').href=`https://www.google.com/maps/dir/?api=1&destination=${gem.lat},${gem.lng}`;
+
+  document.getElementById('detail-info-grid').innerHTML=`
+    <div class="dinfo"><div class="dinfo-label">Best Time</div><div class="dinfo-val">🕐 ${gem.best}</div></div>
+    <div class="dinfo"><div class="dinfo-label">How to Reach</div><div class="dinfo-val">🗺️ ${gem.reach.slice(0,40)}${gem.reach.length>40?'…':''}</div></div>
+    <div class="dinfo"><div class="dinfo-label">GPS Coordinates</div><div class="dinfo-val" style="font-size:11px;font-family:monospace">${gem.lat.toFixed(4)}°N, ${gem.lng.toFixed(4)}°E</div></div>
+    <div class="dinfo"><div class="dinfo-label">Videos Available</div><div class="dinfo-val">📹 ${gem.vids} spatial videos</div></div>`;
+
+  const vids=document.getElementById('detail-vids');
+  vids.innerHTML=Array.from({length:gem.vids},(_,i)=>`
+    <div class="vid-tile" style="background:linear-gradient(145deg,${gem.col1}18,${gem.col2}10);border:0.5px solid ${gem.col1}25;" onclick="openPlayerAt(${gem.id},${i})">
+      <span style="font-size:24px">${gem.emoji}</span>
+      <div style="position:absolute;bottom:5px;left:0;right:0;text-align:center;font-size:9px;color:rgba(0,0,0,0.35);font-weight:700">#${i+1}</div>
+      <div class="vid-tile-overlay"><svg width="12" height="14" viewBox="0 0 10 12"><path d="M1 1l8 5-8 5V1z" fill="white"/></svg></div>
+    </div>`).join('');
+
+  document.getElementById('detail').classList.add('open');
+  setSheet('peek');
+  // Fly map
+  map.flyTo([gem.lat,gem.lng],13,{duration:1.2});
+}
+function closeDetail(){document.getElementById('detail').classList.remove('open');currentGem=null;}
+
+// ═══════════════════════════════════════════
+// VIDEO PLAYER
+// ═══════════════════════════════════════════
+let playerGem=null,vidIdx=0,playingState=false,progVal=0,rafId=null,frameT=0;
+
+function openPlayerAt(id,idx){
+  playerGem=GEMS.find(g=>g.id===id);
+  vidIdx=idx;
+  if(!playerGem)return;
+  document.getElementById('player-name').textContent=playerGem.name;
+  document.getElementById('player-sub').textContent=playerGem.district+' · '+playerGem.cat;
+  document.getElementById('player-vidnum').textContent=(idx+1)+' / '+playerGem.vids;
+  document.getElementById('player-info-name').textContent=playerGem.name;
+  document.getElementById('player-info-meta').textContent=playerGem.district+' · '+playerGem.lat.toFixed(4)+'°N '+playerGem.lng.toFixed(4)+'°E';
+  progVal=0;playingState=true;frameT=0;
+  document.getElementById('player-big-btn').textContent='⏸';
+  document.getElementById('player').classList.add('open');
+  drawPlayerFrame();
+  startAnim();
+}
+function openPlayer(id){openPlayerAt(id,0);}
+function closePlayer(){
+  document.getElementById('player').classList.remove('open');
+  playingState=false;cancelAnimationFrame(rafId);
+}
+function togglePlay(){
+  playingState=!playingState;
+  document.getElementById('player-big-btn').textContent=playingState?'⏸':'▶';
+  if(playingState)startAnim();
+}
+function startAnim(){
+  cancelAnimationFrame(rafId);
+  function step(){
+    if(!playingState)return;
+    frameT++;progVal=Math.min(100,progVal+0.12);
+    document.getElementById('progress-fill').style.width=progVal+'%';
+    const s=Math.floor(progVal*0.24);
+    document.getElementById('pt-curr').textContent='0:'+String(s).padStart(2,'0');
+    drawPlayerFrame();
+    if(progVal>=100){playingState=false;document.getElementById('player-big-btn').textContent='▶';return;}
+    rafId=requestAnimationFrame(step);
+  }
+  rafId=requestAnimationFrame(step);
+}
+function drawPlayerFrame(){
+  if(!playerGem)return;
+  const c=document.getElementById('player-canvas');
+  c.width=c.offsetWidth||400;c.height=c.offsetHeight||640;
+  const ctx=c.getContext('2d'),w=c.width,h=c.height;
+  ctx.fillStyle='#050810';ctx.fillRect(0,0,w,h);
+  const a=(frameT*0.008)%(Math.PI*2);
+  const gx=w/2+Math.sin(a)*w*0.25,gy=h/2+Math.cos(a*0.7)*h*0.18;
+  const gr=ctx.createRadialGradient(gx,gy,0,gx,gy,Math.max(w,h)*0.9);
+  gr.addColorStop(0,playerGem.col1+'40');gr.addColorStop(0.5,playerGem.col2+'18');gr.addColorStop(1,'#050810');
+  ctx.fillStyle=gr;ctx.fillRect(0,0,w,h);
+  // Grid
+  ctx.strokeStyle=playerGem.col1+'08';ctx.lineWidth=1;
+  for(let i=0;i<w;i+=35){ctx.beginPath();ctx.moveTo(i,0);ctx.lineTo(i,h);ctx.stroke();}
+  for(let i=0;i<h;i+=35){ctx.beginPath();ctx.moveTo(0,i);ctx.lineTo(w,i);ctx.stroke();}
+  // Emoji
+  ctx.font=`${Math.min(w,h)*0.25}px system-ui`;ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.shadowColor=playerGem.col1;ctx.shadowBlur=50;
+  ctx.fillText(playerGem.emoji,w/2,h/2-h*0.04);ctx.shadowBlur=0;
+  // Bottom fade
+  const ng=ctx.createLinearGradient(0,h*0.5,0,h);
+  ng.addColorStop(0,'rgba(5,8,16,0)');ng.addColorStop(1,'rgba(5,8,16,0.9)');
+  ctx.fillStyle=ng;ctx.fillRect(0,h*0.5,w,h*0.5);
+}
+function scrub(e){
+  const r=e.currentTarget.getBoundingClientRect();
+  progVal=((e.clientX-r.left)/r.width)*100;
+  frameT=Math.round(progVal*15);
+  document.getElementById('progress-fill').style.width=progVal+'%';
+  drawPlayerFrame();
+}
+
+// ═══════════════════════════════════════════
+// FILTER PANEL
+// ═══════════════════════════════════════════
+let filterOpen=false;
+function toggleFilter(){
+  filterOpen=!filterOpen;
+  document.getElementById('filter-panel').classList.toggle('open',filterOpen);
+  document.getElementById('filter-btn').classList.toggle('active',filterOpen);
+}
+document.addEventListener('click',e=>{
+  if(!e.target.closest('#filter-panel')&&!e.target.closest('#filter-btn')&&filterOpen){
+    filterOpen=false;
+    document.getElementById('filter-panel').classList.remove('open');
+    document.getElementById('filter-btn').classList.remove('active');
+  }
+});
+
+// ═══════════════════════════════════════════
+// LOCATION & MISC
+// ═══════════════════════════════════════════
+function goToLocation(){map.flyTo([17.924,77.515],9,{duration:1.5});}
+
+// Map pan → update visible count
+map.on('moveend',()=>{
+  const b=map.getBounds();
+  const vis=GEMS.filter(g=>b.contains([g.lat,g.lng]));
+  document.getElementById('place-count').textContent=vis.length+' visible';
+});
+
+// Initial render
+renderFeed(GEMS);
+</script>
+</body>
+</html>
